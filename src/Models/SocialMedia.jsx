@@ -1,4 +1,4 @@
-import { useGLTF, Center } from "@react-three/drei";
+import { useGLTF, Center, Float } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
 const LinkMapper = {
@@ -41,7 +41,7 @@ export default () => {
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
     <Center position={[w * 4, -2, 0]}>
-      <>
+      <Float rotationIntensity={0.15}>
         <primitive object={nodes.scbase} scale={[w / 4, w / 4, w / 4]} />
         <SocialMediaLink obj={nodes.be} label={"be"} w={w} h={h} />
         <SocialMediaLink obj={nodes.email} label={"email"} w={w} h={h} />
@@ -49,7 +49,7 @@ export default () => {
         <SocialMediaLink obj={nodes.github} label={"github"} w={w} h={h} />
         <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} h={h} />
         <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} h={h} />
-      </>
+      </Float>
     </Center>
   );
 };

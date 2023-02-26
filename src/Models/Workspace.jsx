@@ -1,4 +1,4 @@
-import { useGLTF, Center } from "@react-three/drei";
+import { useGLTF, Center, Float } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import Resume from "../assets/resume.pdf";
 import ClickableItem from "./Helper/ClickableItem";
@@ -12,7 +12,7 @@ export default () => {
 
   return (
     <Center position={[w, 0, 0]} scale={[w / 4, w / 4, w / 4]}>
-      <>
+      <Float rotationIntensity={0.15}>
         <primitive object={nodes.base} />
         <mesh
           geometry={nodes.resume.geometry}
@@ -47,7 +47,7 @@ export default () => {
           geometry={nodes.name.geometry}
           material={nodes.name.material}
         />
-      </>
+      </Float>
     </Center>
   );
 };

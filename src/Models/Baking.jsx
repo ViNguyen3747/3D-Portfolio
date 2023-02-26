@@ -1,4 +1,4 @@
-import { useGLTF, Center } from "@react-three/drei";
+import { useGLTF, Center, Float } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import ClickableItem from "./Helper/ClickableItem";
 
@@ -8,13 +8,13 @@ export default () => {
 
   return (
     <Center position={[w * 2, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
-      <>
+      <Float rotationIntensity={0.15}>
         <primitive object={nodes.base} />
         <ClickableItem isPrimitive label="omlette" object={nodes.omlette} />
         <ClickableItem isPrimitive label="rolling" object={nodes.rolling} />
         <ClickableItem isPrimitive label="loaf" object={nodes.loaf} />
         <ClickableItem isPrimitive label="piping" object={nodes.piping} />
-      </>
+      </Float>
     </Center>
   );
 };
