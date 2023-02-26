@@ -5,8 +5,8 @@ export default function Card() {
   const isCardOpened = useCard((state) => state.isCardOpened);
   const closeCard = useCard((state) => state.closeCard);
 
-  const handleClick = () => {
-    closeCard();
+  const handleClick = (event) => {
+    if (event) event.preventDefault();
     const cardEl = document.querySelector(`#card`);
     const containerEl = cardEl?.parentElement;
     const clonedMenuEl = cardEl?.cloneNode(true);
@@ -16,12 +16,13 @@ export default function Card() {
       containerEl?.removeChild(clonedMenuEl);
     });
     containerEl?.appendChild(clonedMenuEl);
+    closeCard();
   };
 
   return (
     isCardOpened && (
       <div id="card" className="fade-in">
-        <button onClick={() => handleClick()}>Close</button>
+        <button onClick={handleClick}>Close</button>
         <p>{message}</p>
       </div>
     )
