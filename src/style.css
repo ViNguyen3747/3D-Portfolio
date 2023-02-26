@@ -120,19 +120,27 @@ button:active {
   -webkit-box-shadow: 0 0 0 0 black;
   box-shadow: 0 0 0 0 black;
 }
-
-#side-guide {
+.navigation-guide {
   position: absolute;
   left: 0;
-  background-color: #ffffffd4;
+  top: 30%;
+  transform: translateX(-350px);
+  transition: transform 0.33s ease-out;
+  z-index: 1;
+  cursor: pointer;
+}
+.is-active {
+  transform: translateX(0);
+}
+#side-guide {
+  background-color: #ffffff85;
   overflow: hidden;
   color: black;
-  top: 30%;
   height: fit-content;
   min-height: 300px;
   width: 300px;
   padding: 20px;
-  border-radius: 0 30px 30px 0;
+  border-radius: 0 10% 5% 0;
   letter-spacing: 2.5px;
   line-height: 30px;
   font-size: 13px;
@@ -144,9 +152,10 @@ button:active {
 }
 .toggle-button {
   position: absolute;
-  margin-left: 330px;
-  top: 28%;
+  top: 25%;
   z-index: 1;
+  transform: translateX(10px);
+  transition: transform 0.33s ease-out;
   padding: 5px;
   background-color: #ffffff;
   -webkit-box-shadow: 2px 5px 0 0 #d96846;
@@ -158,8 +167,10 @@ button:active {
 .toggle-button > img {
   width: 70px;
 }
+.toggle-active {
+  transform: translateX(360px);
+}
 .item-list {
-  pointer-events: none;
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, auto);

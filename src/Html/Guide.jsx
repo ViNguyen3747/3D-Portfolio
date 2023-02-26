@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const items = [
   "books",
   "coffee",
@@ -13,16 +15,28 @@ const items = [
 ];
 
 export default () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <>
-      <div className="toggle-button" onClick={() => {}}>
+      <div
+        className={`toggle-button  ${isOpen && "toggle-active"}`}
+        onClick={(e) => handleToggle(e)}
+      >
         <img src="/avatar.svg" />
       </div>
-      <div id="side-guide">
-        <div className="item-list">
-          {items.map((item) => (
-            <img src={`/Guide/${item}.png`} alt={item} />
-          ))}
+      <div
+        className={`navigation-guide ${isOpen && "is-active"}`}
+        onClick={(e) => handleToggle(e)}
+      >
+        <div id="side-guide">
+          <div className="item-list">
+            {items.map((item) => (
+              <img key={item} src={`/Guide/${item}.png`} alt={item} />
+            ))}
+          </div>
         </div>
       </div>
     </>

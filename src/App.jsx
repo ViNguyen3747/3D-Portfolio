@@ -1,6 +1,7 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
+import { Overlay, Guide, Subheaders } from "./Html";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import {
   Avatar,
@@ -11,10 +12,11 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
-import { Subheaders } from "./Html";
 function App() {
   return (
     <>
+      <Overlay />
+      <Guide />
       <Canvas camera={{ position: [1, 5, 30], fov: 20 }}>
         <ambientLight intensity={0.8} />
         <spotLight
