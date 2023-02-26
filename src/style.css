@@ -121,6 +121,53 @@ button:active {
   box-shadow: 0 0 0 0 black;
 }
 
+#side-guide {
+  position: absolute;
+  left: 0;
+  background-color: #ffffffd4;
+  overflow: hidden;
+  color: black;
+  top: 30%;
+  height: fit-content;
+  min-height: 300px;
+  width: 300px;
+  padding: 20px;
+  border-radius: 0 30px 30px 0;
+  letter-spacing: 2.5px;
+  line-height: 30px;
+  font-size: 13px;
+  border: 1px solid #d96846;
+  border-left: 0;
+  -webkit-box-shadow: 2px 5px 0 0 #d96846;
+  box-shadow: 2px 5px 0 0 #d96846;
+  padding-right: 50px;
+}
+.toggle-button {
+  position: absolute;
+  margin-left: 330px;
+  top: 28%;
+  z-index: 1;
+  padding: 5px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 2px 5px 0 0 #d96846;
+  box-shadow: 2px 5px 0 0 #d96846;
+  border-radius: 50%;
+  border: 1px solid #d96846;
+  cursor: pointer;
+}
+.toggle-button > img {
+  width: 70px;
+}
+.item-list {
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, auto);
+}
+.item-list > img {
+  width: 100px;
+}
+
 @-webkit-keyframes slide-in-left {
   0% {
     -webkit-transform: translateX(0);

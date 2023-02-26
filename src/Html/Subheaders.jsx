@@ -9,7 +9,7 @@ export default () => {
       </div>
       <div
         className="subheaders"
-        style={{ position: "absolute", left: "230vw", top: "20vh" }}
+        style={{ position: "absolute", left: "230vw", top: "19vh" }}
       >
         Welcome to my messy kitchen :{")"}
       </div>

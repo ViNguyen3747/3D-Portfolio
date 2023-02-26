@@ -32,7 +32,7 @@ export default () => {
         >
           Welcome to my portfolio !!!
         </Text>
-      </Center>{" "}
+      </Center>
       <Center position={[0, -w / 8, 0]} scale={w / 200}>
         <Text
           color="#fffffe"

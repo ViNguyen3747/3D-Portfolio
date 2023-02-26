@@ -11,7 +11,7 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
-import Subheaders from "./Html/Subheaders";
+import { Subheaders } from "./Html";
 function App() {
   return (
     <>
