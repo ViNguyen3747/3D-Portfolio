@@ -3,7 +3,6 @@ import { useThree } from "@react-three/fiber";
 
 export default () => {
   const { nodes } = useGLTF("./Models/text-optimize.glb");
-  console.log(nodes);
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
     <>

@@ -47,6 +47,26 @@ export default () => {
             <VideoMaterial label="workaholic" flipY />
           </Suspense>
         </mesh>
+        <mesh geometry={nodes.energy.geometry}>
+          <Suspense fallback={null}>
+            <FallBackMaterial label="energy" />
+          </Suspense>
+        </mesh>
+        <mesh geometry={nodes.stairs.geometry}>
+          <Suspense fallback={null}>
+            <FallBackMaterial label="stairs" />
+          </Suspense>
+        </mesh>
+        <mesh geometry={nodes.workspace.geometry}>
+          <Suspense fallback={null}>
+            <FallBackMaterial label="workspace" />
+          </Suspense>
+        </mesh>
+        <mesh geometry={nodes.booklovers.geometry}>
+          <Suspense fallback={null}>
+            <FallBackMaterial label="booklovers" />
+          </Suspense>
+        </mesh>
       </>
     </Center>
   );
