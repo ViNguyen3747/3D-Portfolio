@@ -26,7 +26,12 @@ export default () => {
         className={`toggle-button  ${isOpen && "toggle-active"}`}
         onClick={(e) => handleToggle(e)}
       >
-        <img src="/avatar.webp" alt="toggle guide button" />
+        <img
+          src="/avatar.webp"
+          alt="toggle guide button"
+          width="30"
+          height="30"
+        />
       </div>
       <div
         className={`navigation-guide ${isOpen && "is-active"}`}
@@ -35,7 +40,13 @@ export default () => {
         Clickable Items Helper
         <div className="item-list">
           {items.map((item) => (
-            <img key={item} src={`/Guide/${item}.webp`} alt={item} />
+            <img
+              key={item}
+              src={`/Guide/${item}.webp`}
+              alt={item}
+              width="70"
+              height="70"
+            />
           ))}
         </div>
       </div>

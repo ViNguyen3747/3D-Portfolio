@@ -3,9 +3,9 @@ export default () => {
     <>
       <div
         className="subheaders"
-        style={{ position: "absolute", left: "50vw", top: "70vh" }}
+        style={{ position: "absolute", left: "150vw", top: "10vh" }}
       >
-        {`Some items are clickable. Find them to discover some interesting facts about myself >.-`}
+        {`Discover some interesting facts about myself via clickable items :)`}
       </div>
       <div
         className="subheaders"

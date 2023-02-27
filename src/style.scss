@@ -26,7 +26,7 @@ body {
   background: #090e01;
   color: black;
   line-height: 25px;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 1px;
   overscroll-behavior: none;
   font-family: "Press Start 2P";
@@ -99,10 +99,10 @@ body {
 }
 .subheaders {
   background-color: rgba(255, 255, 255, 0.848);
-  height: fit-content;
-  width: 11vw;
-  min-width: 210px;
-  padding: 20px;
+  width: max-content;
+  min-width: 100px;
+  max-width: 270px;
+  padding: 1.1em;
   border-radius: 20px;
   @include shadow(#d96846);
 }
@@ -138,10 +138,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, auto);
-    img {
-      width: 4vw;
-      max-width: 70px;
-    }
   }
 }
 .is-active {
