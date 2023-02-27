@@ -25,18 +25,17 @@ export default () => {
         className={`toggle-button  ${isOpen && "toggle-active"}`}
         onClick={(e) => handleToggle(e)}
       >
-        <img src="/avatar.svg" />
+        <img src="/avatar.svg" alt="toggle guide button" />
       </div>
       <div
         className={`navigation-guide ${isOpen && "is-active"}`}
         onClick={(e) => handleToggle(e)}
       >
-        <div id="side-guide">
-          <div className="item-list">
-            {items.map((item) => (
-              <img key={item} src={`/Guide/${item}.png`} alt={item} />
-            ))}
-          </div>
+        Clickable Items Helper
+        <div className="item-list">
+          {items.map((item) => (
+            <img key={item} src={`/Guide/${item}.png`} alt={item} />
+          ))}
         </div>
       </div>
     </>

@@ -15,7 +15,7 @@ export default () => {
       </div>
       <div
         className="subheaders"
-        style={{ position: "absolute", left: "290vw", top: "50vh" }}
+        style={{ position: "absolute", left: "290vw", top: "40vh" }}
       >
         Here are some of my works with Threejs and Blender. All my works are
         posted via my Insta account. Scroll --{">"} to checkout the link

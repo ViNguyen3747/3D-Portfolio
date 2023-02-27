@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@500&display=swap");
 
+@mixin shadow($color) {
+  border: 1px solid $color;
+  -webkit-box-shadow: 2px 5px 0 0 $color;
+  box-shadow: 2px 5px 0 0 $color;
+}
+
+@mixin cardStyle($bg) {
+  position: absolute;
+  background-color: $bg;
+  overflow: hidden;
+}
+
 html,
 body,
 #root {
@@ -12,6 +24,11 @@ body,
 
 body {
   background: #090e01;
+  color: black;
+  line-height: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  word-spacing: 0.5px;
   overscroll-behavior: none;
   font-family: "Press Start 2P";
 }
@@ -43,10 +60,7 @@ body {
 }
 
 #card {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.833);
-  overflow: hidden;
-  color: black;
+  @include cardStyle(#ffffffe7);
   top: 50%;
   right: 0;
   width: 30%;
@@ -54,28 +68,43 @@ body {
   min-height: 100px;
   padding: 20px;
   border-radius: 30px 5px 5px 30px;
-  letter-spacing: 2.5px;
-  line-height: 30px;
-  font-size: 13px;
-  border: 1px solid black;
-  -webkit-box-shadow: 2px 5px 0 0 black;
-  box-shadow: 2px 5px 0 0 black;
+  @include shadow(#000000);
+  button {
+    position: relative;
+    background-color: white;
+    border-radius: 3em;
+    padding: 1em 2em;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid black;
+    -webkit-box-shadow: 0 0 0 0 black;
+    box-shadow: 0 0 0 0 black;
+    font-family: "Press Start 2P";
+    &:hover {
+      -webkit-transform: translateY(-4px) translateX(-2px);
+      -ms-transform: translateY(-4px) translateX(-2px);
+      transform: translateY(-4px) translateX(-2px);
+      -webkit-box-shadow: 2px 5px 0 0 black;
+      box-shadow: 2px 5px 0 0 black;
+    }
+    &:active {
+      -webkit-transform: translateY(2px) translateX(1px);
+      -ms-transform: translateY(2px) translateX(1px);
+      transform: translateY(2px) translateX(1px);
+      -webkit-box-shadow: 0 0 0 0 black;
+      box-shadow: 0 0 0 0 black;
+    }
+  }
 }
 .subheaders {
-  background-color: rgba(255, 255, 255, 0.833);
-  overflow: hidden;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.848);
   height: fit-content;
-  text-align: center;
-  min-width: 230px;
-  padding: 25px;
+  width: 10vw;
+  min-width: 200px;
+  padding: 20px;
   border-radius: 20px;
-  letter-spacing: 2.5px;
-  line-height: 25px;
-  font-size: 15px;
-  border: 1px solid #d96846;
-  -webkit-box-shadow: 2px 5px 0 0 #d96846;
-  box-shadow: 2px 5px 0 0 #d96846;
+  @include shadow(#d96846);
 }
 
 .fade-in {
@@ -89,94 +118,55 @@ body {
   animation: slide-out-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-button {
-  position: relative;
-  background-color: white;
-  color: black;
-  border-radius: 10em;
-  font-size: 13px;
-  padding: 1em 2em;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid black;
-  -webkit-box-shadow: 0 0 0 0 black;
-  box-shadow: 0 0 0 0 black;
-  font-family: "Press Start 2P";
-}
-
-button:hover {
-  -webkit-transform: translateY(-4px) translateX(-2px);
-  -ms-transform: translateY(-4px) translateX(-2px);
-  transform: translateY(-4px) translateX(-2px);
-  -webkit-box-shadow: 2px 5px 0 0 black;
-  box-shadow: 2px 5px 0 0 black;
-}
-
-button:active {
-  -webkit-transform: translateY(2px) translateX(1px);
-  -ms-transform: translateY(2px) translateX(1px);
-  transform: translateY(2px) translateX(1px);
-  -webkit-box-shadow: 0 0 0 0 black;
-  box-shadow: 0 0 0 0 black;
-}
 .navigation-guide {
-  position: absolute;
+  @include cardStyle(#e6efe1ae);
+  height: fit-content;
   left: 0;
-  top: 30%;
-  transform: translateX(-350px);
+  top: 12vh;
+  transform: translateX(-340px);
   transition: transform 0.33s ease-out;
   z-index: 1;
   cursor: pointer;
+  min-height: 30vh;
+  width: fit-content;
+  max-width: 300px;
+  padding: 25px;
+  border-radius: 0 10% 5% 0;
+  border-left: 0;
+  @include shadow(#d96846);
+  .item-list {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, auto);
+    img {
+      width: 4vw;
+      min-width: 70px;
+    }
+  }
 }
 .is-active {
   transform: translateX(0);
 }
-#side-guide {
-  background-color: #ffffff85;
-  overflow: hidden;
-  color: black;
-  height: fit-content;
-  min-height: 300px;
-  width: 300px;
-  padding: 20px;
-  border-radius: 0 10% 5% 0;
-  letter-spacing: 2.5px;
-  line-height: 30px;
-  font-size: 13px;
-  border: 1px solid #d96846;
-  border-left: 0;
-  -webkit-box-shadow: 2px 5px 0 0 #d96846;
-  box-shadow: 2px 5px 0 0 #d96846;
-  padding-right: 50px;
-}
+
 .toggle-button {
   position: absolute;
-  top: 25%;
+  top: 8vh;
   z-index: 1;
   transform: translateX(10px);
   transition: transform 0.33s ease-out;
   padding: 5px;
   background-color: #ffffff;
-  -webkit-box-shadow: 2px 5px 0 0 #d96846;
-  box-shadow: 2px 5px 0 0 #d96846;
   border-radius: 50%;
-  border: 1px solid #d96846;
+  @include shadow(#d96846);
   cursor: pointer;
-}
-.toggle-button > img {
-  width: 70px;
+  img {
+    width: 2vw;
+    min-width: 30px;
+    max-width: 50px;
+  }
 }
 .toggle-active {
   transform: translateX(360px);
-}
-.item-list {
-  display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, auto);
-}
-.item-list > img {
-  width: 100px;
 }
 
 @-webkit-keyframes slide-in-left {
