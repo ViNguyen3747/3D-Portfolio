@@ -7,6 +7,7 @@ export default () => {
   const avatarRef = useRef();
 
   useFrame((_, delta) => {
+    if (!avatarRef.current) return;
     avatarRef.current.rotation.y += delta * 0.4;
   });
   const { width: w, height: h } = useThree((state) => state.viewport);

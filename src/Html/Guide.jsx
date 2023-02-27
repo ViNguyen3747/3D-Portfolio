@@ -16,7 +16,8 @@ const items = [
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleToggle = () => {
+  const handleToggle = (e) => {
+    e.preventDefault();
     setIsOpen((prev) => !prev);
   };
   return (

@@ -1,6 +1,5 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Perf } from "r3f-perf";
 import { Overlay, Guide, Subheaders } from "./Html";
 import { ScrollControls, Scroll } from "@react-three/drei";
 import {
