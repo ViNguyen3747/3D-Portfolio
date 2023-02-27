@@ -119,7 +119,7 @@ body {
 }
 
 .navigation-guide {
-  @include cardStyle(#e6efe1ae);
+  @include cardStyle(#f3f3f3c0);
   height: fit-content;
   left: 0;
   top: 12vh;
@@ -152,7 +152,7 @@ body {
   position: absolute;
   top: 10vh;
   z-index: 2;
-  transform: translateX(0px);
+  transform: translateX(5px);
   transition: transform 0.35s ease-out;
   padding: 5px;
   background-color: #ffffff;
@@ -166,14 +166,14 @@ body {
   }
 }
 .toggle-active {
-  transform: translateX(290px);
+  transform: translateX(285px);
 }
 
 @-webkit-keyframes slide-in-left {
   0% {
-    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(40px);
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(40px);
   }
   100% {
     -webkit-transform: translateX(-20px);
@@ -183,9 +183,9 @@ body {
 }
 @keyframes slide-in-left {
   0% {
-    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(40px);
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(40px);
   }
   100% {
     -webkit-transform: translateX(-20px);
@@ -200,9 +200,9 @@ body {
     transform: translateX(-20px);
   }
   100% {
-    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(40px);
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(40px);
   }
 }
 @keyframes slide-out-left {
@@ -212,8 +212,8 @@ body {
     transform: translateX(-20px);
   }
   100% {
-    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(40px);
     opacity: 0;
-    transform: translateX(0);
+    transform: translateX(40px);
   }
 }
