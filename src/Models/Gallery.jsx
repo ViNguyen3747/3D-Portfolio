@@ -21,7 +21,7 @@ const FallBackMaterial = ({ label, flipY = false }) => {
   return <meshBasicMaterial map={texture} toneMapped={false} />;
 };
 export default () => {
-  const { nodes } = useGLTF("./Models/gallery.glb");
+  const { nodes } = useGLTF("./Models/gallery-optimize.glb");
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
     <Center position={[w * 3, 0, 0]} scale={[w / 7, w / 7, w / 7]}>

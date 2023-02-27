@@ -11,14 +11,12 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
-import { Perf } from "r3f-perf";
 function App() {
   return (
     <>
       <Overlay />
       <Guide />
       <Canvas camera={{ position: [1, 5, 30], fov: 20 }}>
-        <Perf />
         <ambientLight intensity={0.8} />
         <spotLight
           angle={0.5}
