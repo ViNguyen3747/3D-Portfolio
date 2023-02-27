@@ -36,16 +36,16 @@ body {
   color: white;
 }
 ::-webkit-scrollbar {
-  height: 10px;
+  height: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #090e01;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 3px solid black;
+  border: 5px solid #090e01;
 }
 
 .Overlay {
