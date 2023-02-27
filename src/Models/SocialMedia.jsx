@@ -36,7 +36,7 @@ function SocialMediaLink({ obj, label, w, h }) {
   );
 }
 export default () => {
-  const { nodes } = useGLTF("./Models/socialmedia-optimize.glb");
+  const { nodes } = useGLTF("./Models/socialmedia.glb");
 
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
@@ -53,3 +53,5 @@ export default () => {
     </Center>
   );
 };
+
+useGLTF.preload("./Models/socialmedia.glb");

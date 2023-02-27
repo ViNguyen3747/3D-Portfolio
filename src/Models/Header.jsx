@@ -2,7 +2,7 @@ import { Center, GradientTexture, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
 export default () => {
-  const { nodes } = useGLTF("./Models/text-optimize.glb");
+  const { nodes } = useGLTF("./Models/text.glb");
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
     <>
@@ -16,3 +16,4 @@ export default () => {
     </>
   );
 };
+useGLTF.preload("./Models/text.glb");
