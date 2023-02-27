@@ -15,7 +15,7 @@ const VideoMaterial = ({ label, flipY = false }) => {
 };
 
 const FallBackMaterial = ({ label, flipY = false }) => {
-  const texture = useTexture(`./Gallery/${label}.png`);
+  const texture = useTexture(`./Gallery/${label}.webp`);
   //Texture is flipY by default
   texture.flipY = flipY;
   return <meshBasicMaterial map={texture} toneMapped={false} />;
@@ -38,8 +38,8 @@ export default () => {
           </Suspense>
         </mesh>
         <mesh geometry={nodes.sunset.geometry}>
-          <Suspense fallback={<FallBackMaterial label="sunset" flipY />}>
-            <VideoMaterial label="sunset" flipY />
+          <Suspense fallback={null}>
+            <FallBackMaterial label="sunset" flipY />
           </Suspense>
         </mesh>
         <mesh geometry={nodes.workaholic.geometry}>
