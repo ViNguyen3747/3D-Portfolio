@@ -85,9 +85,14 @@ body {
   top: 0;
   left: 0;
   margin: 20px;
-  font-size: 8px;
   pointer-events: none;
   color: rgba(255, 255, 255, 0.781);
+  @media only screen and (max-width: 900px) {
+    font-size: 0.3em;
+  }
+  @media only screen and (min-width: 900px) {
+    font-size: 0.7em;
+  }
 }
 
 #card {
