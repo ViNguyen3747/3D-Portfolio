@@ -2,8 +2,8 @@
 
 @mixin shadow($color) {
   border: 1px solid $color;
-  -webkit-box-shadow: 2px 5px 0 0 $color;
-  box-shadow: 2px 5px 0 0 $color;
+  -webkit-box-shadow: 0.1em 0.5em 0 0 $color;
+  box-shadow: 0.1em 0.5em 0 0 $color;
 }
 
 @mixin cardStyle($bg) {
@@ -12,6 +12,38 @@
   overflow: hidden;
 }
 
+@mixin subHeadersResponsive($max-width, $font-size, $margin-top) {
+  max-width: $max-width;
+  font-size: $font-size;
+  margin-top: $margin-top;
+}
+
+@mixin cardResponsive(
+  $font-size,
+  $border-size,
+  $box-shadows-1,
+  $box-shadows-2
+) {
+  font-size: $font-size;
+  button {
+    font-size: $font-size;
+    border: $border-size solid black;
+    -webkit-box-shadow: $box-shadows-1 $box-shadows-2 0 0 black;
+    box-shadow: $box-shadows-1 $box-shadows-2 0 0 black;
+  }
+}
+@mixin guideResponsive($width, $font-size, $column-grid, $img-size) {
+  width: $width;
+  font-size: $font-size;
+  transform: translateX(-($width + 11px));
+  .item-list {
+    grid-template-columns: repeat(3, $column-grid);
+    img {
+      width: $img-size;
+      height: $img-size;
+    }
+  }
+}
 html,
 body,
 #root {
@@ -64,30 +96,23 @@ body {
   right: 0;
   width: 30%;
   height: fit-content;
-  min-height: 100px;
-  padding: 20px;
-  border-radius: 30px 5px 5px 30px;
+  line-height: 2em;
+  padding: 1.2em;
+  border-radius: 2em 0.5em 0.5em 2em;
   @include shadow(#000000);
   button {
+    color: black;
     position: relative;
     background-color: white;
-    border-radius: 3em;
-    padding: 1em 2.5em;
+    border-radius: 2em;
+    padding: 1em 2em;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    border: 1px solid black;
-    -webkit-box-shadow: 0 0 0 0 black;
-    box-shadow: 0 0 0 0 black;
     font-family: "Press Start 2P";
-    font-size: 11px;
-    &:hover {
-      -webkit-transform: translateY(-4px) translateX(-2px);
-      -ms-transform: translateY(-4px) translateX(-2px);
-      transform: translateY(-4px) translateX(-2px);
-      -webkit-box-shadow: 2px 5px 0 0 black;
-      box-shadow: 2px 5px 0 0 black;
-    }
+    -webkit-transform: translateY(-4px) translateX(-2px);
+    -ms-transform: translateY(-4px) translateX(-2px);
+    transform: translateY(-4px) translateX(-2px);
     &:active {
       -webkit-transform: translateY(2px) translateX(1px);
       -ms-transform: translateY(2px) translateX(1px);
@@ -96,15 +121,32 @@ body {
       box-shadow: 0 0 0 0 black;
     }
   }
+  @media only screen and (max-width: 900px) {
+    @include cardResponsive(0.5em, 0px, 0.1px, 1px);
+  }
+  @media only screen and (min-width: 900px) {
+    @include cardResponsive(0.7em, 1px, 0.5px, 2px);
+  }
+  @media only screen and (min-width: 1200px) {
+    @include cardResponsive(1em, 1px, 1px, 4px);
+  }
 }
 .subheaders {
   background-color: rgba(255, 255, 255, 0.848);
   width: max-content;
-  min-width: 100px;
-  max-width: 270px;
-  padding: 1.1em;
-  border-radius: 20px;
+  border-radius: 2em;
+  line-height: 2em;
+  padding: 1em;
   @include shadow(#d96846);
+  @media only screen and (max-width: 900px) {
+    @include subHeadersResponsive(120px, 0.5em, 13vh);
+  }
+  @media only screen and (min-width: 900px) {
+    @include subHeadersResponsive(150px, 0.7em, 15vh);
+  }
+  @media only screen and (min-width: 1200px) {
+    @include subHeadersResponsive(300px, 1em, 0);
+  }
 }
 
 .fade-in {
@@ -121,23 +163,30 @@ body {
 .navigation-guide {
   @include cardStyle(#f3f3f3c0);
   height: fit-content;
+  max-height: 50vh;
   left: 0;
-  top: 12vh;
-  transform: translateX(-290px);
+  top: 20vh;
   transition: transform 0.35s ease-out;
   z-index: 1;
   cursor: pointer;
-  width: fit-content;
-  max-width: 270px;
-  padding: 20px;
+  padding: 1em;
   border-radius: 0 5% 5% 0;
-  font-size: 0.8em;
+  line-height: 2em;
   border-left: 0;
   @include shadow(#d96846);
   .item-list {
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, auto);
+  }
+  @media only screen and (max-width: 900px) {
+    @include guideResponsive(120px, 0.6em, 40px, 30px);
+  }
+  @media only screen and (min-width: 900px) {
+    @include guideResponsive(190px, 0.7em, 60px, 50px);
+  }
+  @media only screen and (min-width: 1200px) {
+    @include guideResponsive(200px, 0.8em, 70px, 60px);
   }
 }
 .is-active {
@@ -146,23 +195,50 @@ body {
 
 .toggle-button {
   position: absolute;
-  top: 10vh;
+  top: 15vh;
   z-index: 2;
   transform: translateX(5px);
   transition: transform 0.35s ease-out;
-  padding: 5px;
+  padding: 0.5em;
   background-color: #ffffff;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
   @include shadow(#d96846);
   cursor: pointer;
-  img {
+  @media only screen and (max-width: 900px) {
+    width: 25px;
+    height: 25px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  @media only screen and (min-width: 900px) {
     width: 30px;
+    height: 30px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 35px;
+    height: 35px;
+    img {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
 .toggle-active {
-  transform: translateX(285px);
+  @media only screen and (max-width: 900px) {
+    transform: translateX(145px);
+  }
+  @media only screen and (min-width: 900px) {
+    transform: translateX(210px);
+  }
+  @media only screen and (min-width: 1200px) {
+    transform: translateX(220px);
+  }
 }
 
 @-webkit-keyframes slide-in-left {
@@ -172,9 +248,9 @@ body {
     transform: translateX(40px);
   }
   100% {
-    -webkit-transform: translateX(-20px);
+    -webkit-transform: translateX(-5px);
     opacity: 1;
-    transform: translateX(-20px);
+    transform: translateX(-5px);
   }
 }
 @keyframes slide-in-left {
@@ -184,16 +260,16 @@ body {
     transform: translateX(40px);
   }
   100% {
-    -webkit-transform: translateX(-20px);
+    -webkit-transform: translateX(-5px);
     opacity: 1;
-    transform: translateX(-20px);
+    transform: translateX(-5px);
   }
 }
 
 @-webkit-keyframes slide-out-left {
   0% {
-    -webkit-transform: translateX(-20px);
-    transform: translateX(-20px);
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
   }
   100% {
     -webkit-transform: translateX(40px);
@@ -203,9 +279,9 @@ body {
 }
 @keyframes slide-out-left {
   0% {
-    -webkit-transform: translateX(-20px);
+    -webkit-transform: translateX(-5px);
     opacity: 1;
-    transform: translateX(-20px);
+    transform: translateX(-5px);
   }
   100% {
     -webkit-transform: translateX(40px);

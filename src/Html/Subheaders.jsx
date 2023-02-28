@@ -5,7 +5,7 @@ export default () => {
         className="subheaders"
         style={{ position: "absolute", left: "150vw", top: "10vh" }}
       >
-        {`Discover some interesting facts about myself via clickable items :)`}
+        {`Discover some interesting facts about myself via clickable items >.-`}
       </div>
       <div
         className="subheaders"
@@ -22,7 +22,7 @@ export default () => {
       </div>
       <div
         className="subheaders"
-        style={{ position: "absolute", left: "290vw", top: "40vh" }}
+        style={{ position: "absolute", left: "290vw", top: "50vh" }}
       >
         Some of my works made in Blender
       </div>
