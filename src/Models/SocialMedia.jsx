@@ -14,25 +14,27 @@ function SocialMediaLink({ obj, label, w, h }) {
     window.open(LinkMapper[label]);
   };
   return (
-    <group
-      onPointerOver={(event) => {
-        document.body.style.cursor = "pointer";
-        event.stopPropagation();
-      }}
-      onPointerOut={(event) => {
-        document.body.style.cursor = "default";
-        event.stopPropagation();
-      }}
-    >
-      <primitive
-        object={obj}
-        scale={[w / 4, w / 4, w / 4]}
-        onClick={(event) => {
-          handleLink();
+    <Float rotationIntensity={0.7}>
+      <group
+        onPointerOver={(event) => {
+          document.body.style.cursor = "pointer";
           event.stopPropagation();
         }}
-      />
-    </group>
+        onPointerOut={(event) => {
+          document.body.style.cursor = "default";
+          event.stopPropagation();
+        }}
+      >
+        <primitive
+          object={obj}
+          scale={[w / 5, w / 5, w / 5]}
+          onClick={(event) => {
+            handleLink();
+            event.stopPropagation();
+          }}
+        />
+      </group>
+    </Float>
   );
 }
 export default () => {
@@ -40,16 +42,13 @@ export default () => {
 
   const { width: w, height: h } = useThree((state) => state.viewport);
   return (
-    <Center position={[w * 4, -2, 0]}>
-      <Float rotationIntensity={0.15}>
-        <primitive object={nodes.scbase} scale={[w / 4, w / 4, w / 4]} />
-        <SocialMediaLink obj={nodes.be} label={"be"} w={w} h={h} />
-        <SocialMediaLink obj={nodes.email} label={"email"} w={w} h={h} />
-        <SocialMediaLink obj={nodes.facebook} label={"facebook"} w={w} h={h} />
-        <SocialMediaLink obj={nodes.github} label={"github"} w={w} h={h} />
-        <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} h={h} />
-        <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} h={h} />
-      </Float>
+    <Center position={[w * 4, 0, 0]}>
+      <SocialMediaLink obj={nodes.be} label={"be"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.email} label={"email"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.facebook} label={"facebook"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.github} label={"github"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} h={h} />
     </Center>
   );
 };
