@@ -1,14 +1,13 @@
 import React from "react";
 import { useGLTF, Center, Float } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import Resume from "../assets/resume.pdf";
 import ClickableItem from "./Helper/ClickableItem";
 
 export default (props) => {
   const { nodes } = useGLTF("./Models/workspace.glb");
   const { width: w, height: h } = useThree((state) => state.viewport);
   const handleResume = () => {
-    window.open(Resume);
+    window.open("/resume.pdf");
   };
 
   return (
