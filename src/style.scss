@@ -87,12 +87,12 @@ body {
   pointer-events: none;
   color: rgba(255, 255, 255, 0.781);
   @media only screen and (max-width: 900px) {
-    font-size: 0.4em;
-    margin: 10px;
+    font-size: 0.5em;
+    margin: 1px 7px;
   }
   @media only screen and (min-width: 900px) {
-    font-size: 0.7em;
-    margin: 20px;
+    font-size: 0.8em;
+    margin: 5px 10px;
   }
 }
 
