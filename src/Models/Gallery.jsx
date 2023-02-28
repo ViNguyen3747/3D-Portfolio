@@ -2,59 +2,71 @@ import { useGLTF, Center, useTexture } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import { Suspense } from "react";
 
+const LinkMapper = {
+  strawberry: "https://www.instagram.com/p/CoQ-DSOLgea/",
+  bipolar: "https://www.instagram.com/p/ColnPVVrUk7/",
+  sunset: "https://www.instagram.com/p/Cnqv8vfuxZt/",
+  workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
+  energy: "https://www.instagram.com/p/CkPZwRers63/",
+  stairs: "https://www.instagram.com/p/CkfQQrXuhyJ/",
+  workspace: "https://www.instagram.com/p/Ci4g9rWu7hb/",
+  booklovers: "https://www.instagram.com/p/CjCpRhquMhQ/",
+};
+
+const ProjectLink = ({ label, geometry, flipY = false }) => {
+  const handleLink = () => {
+    window.open(LinkMapper[label]);
+  };
+  return (
+    <mesh
+      geometry={geometry}
+      onPointerOver={(event) => {
+        document.body.style.cursor = "pointer";
+        event.stopPropagation();
+      }}
+      onPointerOut={(event) => {
+        document.body.style.cursor = "default";
+        event.stopPropagation();
+      }}
+      onClick={(event) => {
+        handleLink();
+        event.stopPropagation();
+      }}
+    >
+      <Suspense fallback={null}>
+        <ImageTexture label={label} flipY={flipY} />
+      </Suspense>
+    </mesh>
+  );
+};
+
 const ImageTexture = ({ label, flipY = false }) => {
   const texture = useTexture(`./Gallery/${label}.webp`);
   //Texture is flipY by default
   texture.flipY = flipY;
   return <meshBasicMaterial map={texture} toneMapped={false} />;
 };
+
 export default () => {
   const { nodes } = useGLTF("./Models/gallery.glb");
   const { width: w, height: h } = useThree((state) => state.viewport);
+
   return (
     <Center position={[w * 3, 0, 0]} scale={[w / 7, w / 7, w / 7]}>
       <>
         <primitive object={nodes.frames} />
-        <mesh geometry={nodes.strawberry.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="strawberry" />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.bipolar.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="bipolar" />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.sunset.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="sunset" flipY />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.workaholic.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="workaholic" flipY />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.energy.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="energy" />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.stairs.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="stairs" />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.workspace.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="workspace" />
-          </Suspense>
-        </mesh>
-        <mesh geometry={nodes.booklovers.geometry}>
-          <Suspense fallback={null}>
-            <ImageTexture label="booklovers" />
-          </Suspense>
-        </mesh>
+        <ProjectLink geometry={nodes.strawberry.geometry} label="strawberry" />
+        <ProjectLink geometry={nodes.bipolar.geometry} label="bipolar" />
+        <ProjectLink geometry={nodes.sunset.geometry} label="sunset" flipY />
+        <ProjectLink
+          geometry={nodes.workaholic.geometry}
+          label="workaholic"
+          flipY
+        />
+        <ProjectLink geometry={nodes.energy.geometry} label="energy" />
+        <ProjectLink geometry={nodes.stairs.geometry} label="stairs" />
+        <ProjectLink geometry={nodes.workspace.geometry} label="workspace" />
+        <ProjectLink geometry={nodes.booklovers.geometry} label="booklovers" />
       </>
     </Center>
   );
