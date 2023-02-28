@@ -24,7 +24,7 @@ function App() {
           penumbra={1}
           position={[10, 10, 20]}
         />
-        <ScrollControls infinite horizontal damping={0.5} pages={5}>
+        <ScrollControls horizontal pages={5}>
           <Scroll>
             <Suspense fallback={null}>
               <Header />
