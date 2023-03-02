@@ -63,9 +63,10 @@ body {
   background: $color-palette-3;
   color: $text-color;
   font-size: 15px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   overscroll-behavior: none;
   font-family: "Indie Flower", cursive;
+  font-weight: 600;
 }
 ::selection {
   background: $color-palette-2;
@@ -120,6 +121,8 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     font-family: "Indie Flower", cursive;
+    letter-spacing: 2px;
+    font-weight: 600;
     -webkit-transform: translateY(-4px) translateX(-2px);
     -ms-transform: translateY(-4px) translateX(-2px);
     transform: translateY(-4px) translateX(-2px);
@@ -210,7 +213,7 @@ body {
   transform: translateX(2px);
   transition: transform 0.35s ease-out;
   padding: 0.5em;
-  background-color: #fffffffa;
+  background-color: #ffffffea;
   border-radius: 50%;
   cursor: pointer;
   @media only screen and (max-width: 900px) {
