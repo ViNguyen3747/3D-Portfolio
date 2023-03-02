@@ -5,7 +5,7 @@ export default () => {
         className="subheaders"
         style={{ position: "absolute", left: "105vw", top: "20vh" }}
       >
-        Nice to meet you!
+        Nice to meet ya!
       </div>
       <div
         className="subheaders"
