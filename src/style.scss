@@ -66,7 +66,12 @@ body {
   letter-spacing: 2px;
   overscroll-behavior: none;
   font-family: "Indie Flower", cursive;
-  font-weight: 600;
+  @media only screen and (max-width: 900px) {
+    font-weight: 500;
+  }
+  @media only screen and (min-width: 900px) {
+    font-weight: 600;
+  }
 }
 ::selection {
   background: $color-palette-2;
@@ -121,8 +126,14 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     font-family: "Indie Flower", cursive;
-    letter-spacing: 2px;
-    font-weight: 600;
+    @media only screen and (max-width: 900px) {
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+    @media only screen and (min-width: 900px) {
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
     -webkit-transform: translateY(-4px) translateX(-2px);
     -ms-transform: translateY(-4px) translateX(-2px);
     transform: translateY(-4px) translateX(-2px);
