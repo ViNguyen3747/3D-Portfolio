@@ -175,7 +175,7 @@ body {
   height: fit-content;
   max-height: 50vh;
   left: 0;
-  top: 20vh;
+  top: 16vh;
   transition: transform 0.35s ease-out;
   z-index: 1;
   cursor: pointer;
@@ -200,14 +200,14 @@ body {
   }
 }
 .is-active {
-  transform: translateX(0px);
+  transform: translateX(-3px);
 }
 
 .toggle-button {
   position: absolute;
   top: 15vh;
   z-index: 2;
-  transform: translateX(5px);
+  transform: translateX(2px);
   transition: transform 0.35s ease-out;
   padding: 0.5em;
   background-color: #fffffffa;
