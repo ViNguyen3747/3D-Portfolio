@@ -9,7 +9,7 @@ export default () => {
       <Center position={[0, 0, 0]} scale={w / 9}>
         <mesh geometry={nodes.Text.geometry}>
           <meshBasicMaterial>
-            <GradientTexture stops={[0, 1]} colors={["#D96846", "#ffffff"]} />
+            <GradientTexture stops={[0, 1]} colors={["#efb98f", "white"]} />
           </meshBasicMaterial>
         </mesh>
       </Center>

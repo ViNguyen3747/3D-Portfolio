@@ -1,9 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
+$color-palette-1: #9fa26e;
+$color-palette-2: #dad7b4;
+$color-palette-3: #c8a086;
+$color-palette-4: #efb98f;
+$color-palette-5: #d3896d;
+$text-color: #5a5959;
 @mixin shadow($color) {
   border: 1px solid $color;
-  -webkit-box-shadow: 0.1em 0.5em 0 0 $color;
-  box-shadow: 0.1em 0.5em 0 0 $color;
+  -webkit-box-shadow: 0.1em 0.3em 0 0 $color;
+  box-shadow: 0.1em 0.3em 0 0 $color;
 }
 
 @mixin cardStyle($bg) {
@@ -27,9 +33,9 @@
   font-size: $font-size;
   button {
     font-size: $font-size;
-    border: $border-size solid black;
-    -webkit-box-shadow: $box-shadows-1 $box-shadows-2 0 0 black;
-    box-shadow: $box-shadows-1 $box-shadows-2 0 0 black;
+    border: $border-size solid $color-palette-1;
+    -webkit-box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-1;
+    box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-1;
   }
 }
 @mixin guideResponsive($width, $font-size, $column-grid, $img-size) {
@@ -55,16 +61,15 @@ body,
 }
 
 body {
-  background: #090e01;
-  color: black;
-  line-height: 25px;
-  font-size: 10px;
+  background: $color-palette-3;
+  color: $text-color;
+  font-size: 15px;
   letter-spacing: 1px;
   overscroll-behavior: none;
-  font-family: "Press Start 2P";
+  font-family: "Work Sans", sans-serif;
 }
 ::selection {
-  background: #d96846;
+  background: $color-palette-2;
   color: white;
 }
 ::-webkit-scrollbar {
@@ -72,12 +77,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #090e01;
+  background: $color-palette-3;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 5px solid #090e01;
+  border: 5px solid $color-palette-3;
 }
 
 .Overlay {
@@ -87,11 +92,11 @@ body {
   pointer-events: none;
   color: rgba(255, 255, 255, 0.781);
   @media only screen and (max-width: 900px) {
-    font-size: 0.5em;
+    font-size: 0.6em;
     margin: 1px 7px;
   }
   @media only screen and (min-width: 900px) {
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 5px 10px;
   }
 }
@@ -102,20 +107,20 @@ body {
   right: 0;
   width: 30%;
   height: fit-content;
-  line-height: 2em;
-  padding: 1.2em;
+  line-height: 1.7em;
+  padding: 1.2em 0.1em 0.1em 1em;
   border-radius: 2em 0.5em 0.5em 2em;
-  @include shadow(#000000);
+  @include shadow($color-palette-1);
   button {
-    color: black;
+    color: $color-palette-1;
     position: relative;
     background-color: white;
     border-radius: 2em;
-    padding: 1em 2em;
+    padding: 0.5em 1.5em;
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    font-family: "Press Start 2P";
+    font-family: "Work Sans", sans-serif;
     -webkit-transform: translateY(-4px) translateX(-2px);
     -ms-transform: translateY(-4px) translateX(-2px);
     transform: translateY(-4px) translateX(-2px);
@@ -123,18 +128,18 @@ body {
       -webkit-transform: translateY(2px) translateX(1px);
       -ms-transform: translateY(2px) translateX(1px);
       transform: translateY(2px) translateX(1px);
-      -webkit-box-shadow: 0 0 0 0 black;
-      box-shadow: 0 0 0 0 black;
+      -webkit-box-shadow: 0 0 0 0 $color-palette-1;
+      box-shadow: 0 0 0 0 $color-palette-1;
     }
   }
   @media only screen and (max-width: 900px) {
-    @include cardResponsive(0.5em, 0px, 0.1px, 1px);
+    @include cardResponsive(0.6em, 0px, 0.1px, 1px);
   }
   @media only screen and (min-width: 900px) {
-    @include cardResponsive(0.7em, 1px, 0.5px, 2px);
+    @include cardResponsive(0.8em, 1px, 0.5px, 2px);
   }
   @media only screen and (min-width: 1200px) {
-    @include cardResponsive(1em, 1px, 1px, 4px);
+    @include cardResponsive(1.1em, 1px, 1px, 4px);
   }
 }
 .subheaders {
@@ -143,7 +148,7 @@ body {
   border-radius: 2em;
   line-height: 2em;
   padding: 1em;
-  @include shadow(#d96846);
+  @include shadow($color-palette-1);
   @media only screen and (max-width: 900px) {
     @include subHeadersResponsive(120px, 0.5em, 13vh);
   }
@@ -167,7 +172,7 @@ body {
 }
 
 .navigation-guide {
-  @include cardStyle(#f3f3f3c0);
+  @include cardStyle(#ffffffa1);
   height: fit-content;
   max-height: 50vh;
   left: 0;
@@ -179,20 +184,20 @@ body {
   border-radius: 0 5% 5% 0;
   line-height: 2em;
   border-left: 0;
-  @include shadow(#d96846);
+  @include shadow($color-palette-1);
   .item-list {
     display: grid;
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(3, auto);
   }
   @media only screen and (max-width: 900px) {
-    @include guideResponsive(120px, 0.6em, 40px, 30px);
+    @include guideResponsive(120px, 0.7em, 40px, 30px);
   }
   @media only screen and (min-width: 900px) {
-    @include guideResponsive(190px, 0.7em, 60px, 50px);
+    @include guideResponsive(190px, 0.8em, 60px, 50px);
   }
   @media only screen and (min-width: 1200px) {
-    @include guideResponsive(200px, 0.8em, 70px, 60px);
+    @include guideResponsive(200px, 0.9em, 70px, 60px);
   }
 }
 .is-active {
@@ -206,9 +211,8 @@ body {
   transform: translateX(5px);
   transition: transform 0.35s ease-out;
   padding: 0.5em;
-  background-color: #ffffff;
+  background-color: #fffffffa;
   border-radius: 50%;
-  @include shadow(#d96846);
   cursor: pointer;
   @media only screen and (max-width: 900px) {
     width: 25px;
