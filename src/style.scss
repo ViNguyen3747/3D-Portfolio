@@ -8,8 +8,8 @@ $color-palette-5: #d3896d;
 $text-color: #5a5959;
 @mixin shadow($color) {
   border: 1px solid $color;
-  -webkit-box-shadow: 0.1em 0.3em 0 0 $color;
-  box-shadow: 0.1em 0.3em 0 0 $color;
+  -webkit-box-shadow: 0.1em 0.2em 0 0 $color;
+  box-shadow: 0.1em 0.2em 0 0 $color;
 }
 
 @mixin cardStyle($bg) {
@@ -33,9 +33,9 @@ $text-color: #5a5959;
   font-size: $font-size;
   button {
     font-size: $font-size;
-    border: $border-size solid $color-palette-1;
-    -webkit-box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-1;
-    box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-1;
+    border: $border-size solid $color-palette-2;
+    -webkit-box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-2;
+    box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-2;
   }
 }
 @mixin guideResponsive($width, $font-size, $column-grid, $img-size) {
@@ -92,12 +92,12 @@ body {
   pointer-events: none;
   color: rgba(255, 255, 255, 0.781);
   @media only screen and (max-width: 900px) {
-    font-size: 0.6em;
-    margin: 1px 7px;
+    font-size: 0.5em;
+    margin: 3px 7px;
   }
   @media only screen and (min-width: 900px) {
-    font-size: 1em;
-    margin: 5px 10px;
+    font-size: 0.8em;
+    margin: 7px 10px;
   }
 }
 
@@ -110,7 +110,7 @@ body {
   line-height: 1.7em;
   padding: 1.2em 0.1em 0.1em 1em;
   border-radius: 2em 0.5em 0.5em 2em;
-  @include shadow($color-palette-1);
+  @include shadow($color-palette-2);
   button {
     color: $color-palette-1;
     position: relative;
@@ -128,8 +128,8 @@ body {
       -webkit-transform: translateY(2px) translateX(1px);
       -ms-transform: translateY(2px) translateX(1px);
       transform: translateY(2px) translateX(1px);
-      -webkit-box-shadow: 0 0 0 0 $color-palette-1;
-      box-shadow: 0 0 0 0 $color-palette-1;
+      -webkit-box-shadow: 0 0 0 0 $color-palette-2;
+      box-shadow: 0 0 0 0 $color-palette-2;
     }
   }
   @media only screen and (max-width: 900px) {
@@ -148,7 +148,7 @@ body {
   border-radius: 2em;
   line-height: 2em;
   padding: 1em;
-  @include shadow($color-palette-1);
+  @include shadow($color-palette-2);
   @media only screen and (max-width: 900px) {
     @include subHeadersResponsive(120px, 0.5em, 13vh);
   }
@@ -184,7 +184,7 @@ body {
   border-radius: 0 5% 5% 0;
   line-height: 2em;
   border-left: 0;
-  @include shadow($color-palette-1);
+  @include shadow($color-palette-2);
   .item-list {
     display: grid;
     grid-template-columns: repeat(3, 80px);
