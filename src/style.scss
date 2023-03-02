@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 $color-palette-1: #9fa26e;
 $color-palette-2: #dad7b4;
 $color-palette-3: #c8a086;
 $color-palette-4: #efb98f;
 $color-palette-5: #d3896d;
-$text-color: #5a5959;
+$text-color: #000000;
 @mixin shadow($color) {
   border: 1px solid $color;
   -webkit-box-shadow: 0.1em 0.2em 0 0 $color;
@@ -41,7 +40,7 @@ $text-color: #5a5959;
 @mixin guideResponsive($width, $font-size, $column-grid, $img-size) {
   width: $width;
   font-size: $font-size;
-  transform: translateX(-($width + 11px));
+  transform: translateX(-($width + 25px));
   .item-list {
     grid-template-columns: repeat(3, $column-grid);
     img {
@@ -66,7 +65,7 @@ body {
   font-size: 15px;
   letter-spacing: 1px;
   overscroll-behavior: none;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Indie Flower", cursive;
 }
 ::selection {
   background: $color-palette-2;
@@ -120,7 +119,7 @@ body {
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Indie Flower", cursive;
     -webkit-transform: translateY(-4px) translateX(-2px);
     -ms-transform: translateY(-4px) translateX(-2px);
     transform: translateY(-4px) translateX(-2px);
@@ -191,13 +190,13 @@ body {
     grid-template-rows: repeat(3, auto);
   }
   @media only screen and (max-width: 900px) {
-    @include guideResponsive(120px, 0.4em, 40px, 30px);
+    @include guideResponsive(120px, 0.5em, 40px, 30px);
   }
   @media only screen and (min-width: 900px) {
-    @include guideResponsive(190px, 0.7em, 60px, 50px);
+    @include guideResponsive(190px, 0.8em, 60px, 50px);
   }
   @media only screen and (min-width: 1200px) {
-    @include guideResponsive(200px, 0.9em, 70px, 60px);
+    @include guideResponsive(200px, 1em, 70px, 60px);
   }
 }
 .is-active {

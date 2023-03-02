@@ -3,7 +3,7 @@ const CardLists = {
   dog: "I named my dog Soda because I used to like drinking soda a lot :)",
   coffee:
     "I love love love coffee. I prefer my coffee black as I can taste the sweetness from the black coffee",
-  name: "My name is Vi, pronounced as 'V'.It's actually a typo made by my Dad. My name is supposed to be 'Vy' which means 'pretty', and 'Vi' means 'tiny' in Vietnamese...",
+  name: "My name is Vi, pronounced as 'V'. It's actually a typo made by my Dad. My name is supposed to be 'Vy' which means 'pretty', and 'Vi' means 'tiny' in Vietnamese...",
   books:
     "I enjoy reading fantasy books. My favorite series are the Kane Chronicles by Rick Riordan",
   loaf: "I get my passion for baking from my mom. And I'm the only one in the family not being lazy to learn baking from her haha",
