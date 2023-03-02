@@ -108,7 +108,7 @@ body {
   width: 30%;
   height: fit-content;
   line-height: 1.7em;
-  padding: 1.2em 0.1em 0.1em 1em;
+  padding: 0.9em 0.1em 0.1em 1em;
   border-radius: 2em 0.5em 0.5em 2em;
   @include shadow($color-palette-2);
   button {
@@ -133,13 +133,13 @@ body {
     }
   }
   @media only screen and (max-width: 900px) {
-    @include cardResponsive(0.6em, 0px, 0.1px, 1px);
+    @include cardResponsive(0.5em, 0px, 0.1px, 0.6px);
   }
   @media only screen and (min-width: 900px) {
-    @include cardResponsive(0.8em, 1px, 0.5px, 2px);
+    @include cardResponsive(0.7em, 1px, 0.3px, 1px);
   }
   @media only screen and (min-width: 1200px) {
-    @include cardResponsive(1.1em, 1px, 1px, 4px);
+    @include cardResponsive(1em, 1px, 1px, 4px);
   }
 }
 .subheaders {
@@ -147,7 +147,7 @@ body {
   width: max-content;
   border-radius: 2em;
   line-height: 2em;
-  padding: 1em;
+  padding: 0.5em 1em 0.5em 1em;
   @include shadow($color-palette-2);
   @media only screen and (max-width: 900px) {
     @include subHeadersResponsive(120px, 0.5em, 13vh);
@@ -191,10 +191,10 @@ body {
     grid-template-rows: repeat(3, auto);
   }
   @media only screen and (max-width: 900px) {
-    @include guideResponsive(120px, 0.7em, 40px, 30px);
+    @include guideResponsive(120px, 0.4em, 40px, 30px);
   }
   @media only screen and (min-width: 900px) {
-    @include guideResponsive(190px, 0.8em, 60px, 50px);
+    @include guideResponsive(190px, 0.7em, 60px, 50px);
   }
   @media only screen and (min-width: 1200px) {
     @include guideResponsive(200px, 0.9em, 70px, 60px);
