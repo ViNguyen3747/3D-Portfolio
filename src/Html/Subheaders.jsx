@@ -13,7 +13,7 @@ export default () => {
           position: "absolute",
           left: "150vw",
           top: "10vh",
-          backgroundColor: "#9fa26ede",
+          backgroundColor: "#a6a97eda",
           color: "white",
           borderColor: "white",
         }}
@@ -36,7 +36,7 @@ export default () => {
           position: "absolute",
           left: "290vw",
           top: "50vh",
-          backgroundColor: "#9fa26ede",
+          backgroundColor: "#a6a97eda",
           color: "white",
           borderColor: "white",
         }}
