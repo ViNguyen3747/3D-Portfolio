@@ -17,7 +17,7 @@ function App() {
       <Overlay />
       <Guide />
       <Canvas camera={{ position: [1, 5, 30], fov: 20 }}>
-        <ambientLight intensity={0.8} />
+        <ambientLight intensity={0.7} />
         <spotLight
           angle={0.5}
           color="#ffffff"
