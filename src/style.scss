@@ -60,32 +60,33 @@ body,
 }
 
 body {
+  background: $color-palette-1;
   background: -webkit-linear-gradient(
     180deg,
     #a1a36e 0%,
-    #abad7b 12%,
-    #b7b78a 31%,
-    #c3c198 65%,
-    #cfcda5 78%,
-    #dad7b4 85%,
-    #e0ddc2 89%,
-    #e9e7d2 93%,
-    #f0eee0 96%,
-    #f8f8f1 98%,
+    #abad7b 3%,
+    #b7b78a 7%,
+    #c3c198 13%,
+    #cfcda5 20%,
+    #dad7b4 29%,
+    #e0ddc2 40%,
+    #e9e7d2 55%,
+    #f0eee0 71%,
+    #f8f8f1 88%,
     #ffffff 100%
   );
   background: linear-gradient(
     180deg,
     #a1a36e 0%,
-    #abad7b 12%,
-    #b7b78a 31%,
-    #c3c198 65%,
-    #cfcda5 78%,
-    #dad7b4 85%,
-    #e0ddc2 89%,
-    #e9e7d2 93%,
-    #f0eee0 96%,
-    #f8f8f1 98%,
+    #abad7b 3%,
+    #b7b78a 7%,
+    #c3c198 13%,
+    #cfcda5 20%,
+    #dad7b4 29%,
+    #e0ddc2 40%,
+    #e9e7d2 55%,
+    #f0eee0 71%,
+    #f8f8f1 88%,
     #ffffff 100%
   );
   color: $text-color;
