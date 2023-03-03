@@ -13,9 +13,6 @@ export default () => {
           position: "absolute",
           left: "150vw",
           top: "10vh",
-          backgroundColor: "#a6a97eda",
-          color: "white",
-          borderColor: "white",
         }}
       >
         {`Discover some interesting facts about myself via clickable items >.-`}
@@ -36,9 +33,6 @@ export default () => {
           position: "absolute",
           left: "290vw",
           top: "50vh",
-          backgroundColor: "#a6a97eda",
-          color: "white",
-          borderColor: "white",
         }}
       >
         Some of my works made in Blender
