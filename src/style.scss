@@ -60,35 +60,6 @@ body,
 }
 
 body {
-  background: $color-palette-1;
-  background: -webkit-linear-gradient(
-    180deg,
-    #a1a36e 0%,
-    #abad7b 3%,
-    #b7b78a 7%,
-    #c3c198 13%,
-    #cfcda5 20%,
-    #dad7b4 29%,
-    #e0ddc2 40%,
-    #e9e7d2 55%,
-    #f0eee0 71%,
-    #f8f8f1 88%,
-    #ffffff 100%
-  );
-  background: linear-gradient(
-    180deg,
-    #a1a36e 0%,
-    #abad7b 3%,
-    #b7b78a 7%,
-    #c3c198 13%,
-    #cfcda5 20%,
-    #dad7b4 29%,
-    #e0ddc2 40%,
-    #e9e7d2 55%,
-    #f0eee0 71%,
-    #f8f8f1 88%,
-    #ffffff 100%
-  );
   color: $text-color;
   font-size: 15px;
   letter-spacing: 2px;
@@ -100,6 +71,38 @@ body {
   @media only screen and (min-width: 900px) {
     font-weight: 600;
   }
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    180deg,
+    hsl(63deg 22% 53%) 0%,
+    hsl(62deg 22% 59%) 20%,
+    hsl(60deg 23% 64%) 29%,
+    hsl(59deg 26% 69%) 36%,
+    hsl(57deg 29% 74%) 43%,
+    hsl(55deg 34% 78%) 50%,
+    hsl(55deg 33% 83%) 57%,
+    hsl(55deg 32% 88%) 64%,
+    hsl(55deg 31% 92%) 71%,
+    hsl(55deg 31% 96%) 80%,
+    hsl(0deg 0% 100%) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    hsl(63deg 22% 53%) 0%,
+    hsl(62deg 22% 59%) 20%,
+    hsl(60deg 23% 64%) 29%,
+    hsl(59deg 26% 69%) 36%,
+    hsl(57deg 29% 74%) 43%,
+    hsl(55deg 34% 78%) 50%,
+    hsl(55deg 33% 83%) 57%,
+    hsl(55deg 32% 88%) 64%,
+    hsl(55deg 31% 92%) 71%,
+    hsl(55deg 31% 96%) 80%,
+    hsl(0deg 0% 100%) 100%
+  );
 }
 ::selection {
   background: $color-palette-2;
@@ -122,6 +125,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   pointer-events: none;
   color: rgba(255, 255, 255, 0.781);
   @media only screen and (max-width: 900px) {
