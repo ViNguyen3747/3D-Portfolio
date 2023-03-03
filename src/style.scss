@@ -78,30 +78,28 @@ canvas {
   background: -webkit-linear-gradient(
     180deg,
     hsl(63deg 22% 53%) 0%,
-    hsl(62deg 22% 59%) 18%,
-    hsl(60deg 23% 64%) 34%,
-    hsl(59deg 26% 69%) 48%,
-    hsl(57deg 29% 74%) 58%,
-    hsl(55deg 34% 78%) 66%,
-    hsl(55deg 33% 83%) 74%,
-    hsl(55deg 32% 88%) 80%,
-    hsl(55deg 31% 92%) 87%,
-    hsl(55deg 31% 96%) 94%,
-    hsl(0deg 0% 100%) 100%
+    hsl(63deg 22% 56%) 11%,
+    hsl(63deg 22% 59%) 22%,
+    hsl(63deg 23% 62%) 33%,
+    hsl(63deg 23% 65%) 44%,
+    hsl(63deg 23% 68%) 56%,
+    hsl(63deg 23% 71%) 67%,
+    hsl(63deg 23% 74%) 78%,
+    hsl(63deg 24% 77%) 89%,
+    hsl(62deg 24% 80%) 100%
   );
   background: linear-gradient(
     180deg,
     hsl(63deg 22% 53%) 0%,
-    hsl(62deg 22% 59%) 18%,
-    hsl(60deg 23% 64%) 34%,
-    hsl(59deg 26% 69%) 48%,
-    hsl(57deg 29% 74%) 58%,
-    hsl(55deg 34% 78%) 66%,
-    hsl(55deg 33% 83%) 74%,
-    hsl(55deg 32% 88%) 80%,
-    hsl(55deg 31% 92%) 87%,
-    hsl(55deg 31% 96%) 94%,
-    hsl(0deg 0% 100%) 100%
+    hsl(63deg 22% 56%) 11%,
+    hsl(63deg 22% 59%) 22%,
+    hsl(63deg 23% 62%) 33%,
+    hsl(63deg 23% 65%) 44%,
+    hsl(63deg 23% 68%) 56%,
+    hsl(63deg 23% 71%) 67%,
+    hsl(63deg 23% 74%) 78%,
+    hsl(63deg 24% 77%) 89%,
+    hsl(62deg 24% 80%) 100%
   );
 }
 ::selection {
@@ -113,12 +111,12 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(0, 0%, 100%);
+  background: hsl(62deg 24% 80%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-palette-2;
-  border: 5px solid hsl(0, 0%, 100%);
+  background-color: white;
+  border: 5px solid hsl(62deg 24% 80%);
 }
 
 .Overlay {
