@@ -139,7 +139,7 @@ canvas {
 }
 
 #card {
-  @include cardStyle(#ffffffe7);
+  @include cardStyle(#ffffffcf);
   top: 50%;
   right: 0;
   width: 30%;
@@ -186,7 +186,7 @@ canvas {
   }
 }
 .subheaders {
-  background-color: rgba(255, 255, 255, 0.822);
+  background-color: rgba(255, 255, 255, 0.645);
   width: max-content;
   border-radius: 2em;
   line-height: 2em;
