@@ -5,7 +5,7 @@ export default () => {
         className="subheaders"
         style={{ position: "absolute", left: "105vw", top: "20vh" }}
       >
-        Nice to meet ya!
+        Nice to meet ya! 😊
       </div>
       <div
         className="subheaders"
@@ -15,7 +15,7 @@ export default () => {
           top: "10vh",
         }}
       >
-        {`Discover some interesting facts about myself via clickable items >.-`}
+        Discover some interesting facts about myself via clickable items 😉
       </div>
       <div
         className="subheaders"
@@ -25,7 +25,7 @@ export default () => {
           top: "19vh",
         }}
       >
-        Welcome to my messy kitchen :{")"}
+        Welcome to my messy kitchen 🍳
       </div>
       <div
         className="subheaders"
@@ -35,7 +35,7 @@ export default () => {
           top: "50vh",
         }}
       >
-        Some of my works made in Blender
+        ✨Some of my works made in Blender
       </div>
     </>
   );

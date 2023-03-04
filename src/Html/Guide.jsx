@@ -37,7 +37,7 @@ export default () => {
         className={`navigation-guide ${isOpen && "is-active"}`}
         onClick={(e) => handleToggle(e)}
       >
-        Clickable Items Helper
+        🔍Clickable Items Helper
         <div className="item-list">
           {items.map((item) => (
             <img
