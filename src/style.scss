@@ -125,7 +125,7 @@ canvas {
   left: 0;
   z-index: 1;
   pointer-events: none;
-  color: rgba(255, 255, 255, 0.781);
+  color: $color-palette-5;
   @media only screen and (max-width: 900px) {
     font-size: 0.5em;
     margin: 3px 7px;
@@ -213,7 +213,7 @@ canvas {
 }
 
 .navigation-guide {
-  @include cardStyle(#ffffffa1);
+  @include cardStyle(#e8e5e5af);
   height: fit-content;
   max-height: 50vh;
   left: 0;
