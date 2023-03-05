@@ -77,7 +77,7 @@ canvas {
   height: 100%;
   background: -webkit-linear-gradient(
     180deg,
-    hsl(217deg 23% 50%) 0%,
+    #62799d 0%,
     hsl(218deg 23% 56%) 24%,
     hsl(219deg 23% 61%) 38%,
     hsl(219deg 23% 67%) 49%,
@@ -89,17 +89,17 @@ canvas {
     hsl(0deg 0% 100%) 100%
   );
   background: linear-gradient(
-    180deg,
-    hsl(217deg 23% 50%) 0%,
-    hsl(218deg 23% 56%) 24%,
-    hsl(219deg 23% 61%) 38%,
-    hsl(219deg 23% 67%) 49%,
-    hsl(220deg 23% 72%) 59%,
-    hsl(220deg 23% 77%) 68%,
-    hsl(221deg 23% 83%) 76%,
-    hsl(221deg 23% 89%) 85%,
-    hsl(221deg 23% 94%) 92%,
-    hsl(0deg 0% 100%) 100%
+    0deg,
+    #f6dbc6 0%,
+    hsl(31deg 68% 86%) 11%,
+    hsl(37deg 61% 85%) 22%,
+    hsl(43deg 54% 84%) 33%,
+    hsl(52deg 46% 83%) 44%,
+    hsl(64deg 40% 82%) 56%,
+    hsl(77deg 42% 83%) 67%,
+    hsl(91deg 44% 83%) 78%,
+    hsl(108deg 45% 84%) 89%,
+    #c6ebcb 100%
   );
 }
 ::selection {
@@ -111,12 +111,12 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
+  background: #f6dbc6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(62deg 24% 80%);
-  border: 5px solid white;
+  background-color: white;
+  border: 5px solid #f6dbc6;
 }
 
 .Overlay {
