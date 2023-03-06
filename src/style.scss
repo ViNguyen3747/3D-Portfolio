@@ -77,29 +77,29 @@ canvas {
   height: 100%;
   background: -webkit-linear-gradient(
     180deg,
-    #62799d 0%,
-    hsl(218deg 23% 56%) 24%,
-    hsl(219deg 23% 61%) 38%,
-    hsl(219deg 23% 67%) 49%,
-    hsl(220deg 23% 72%) 59%,
-    hsl(220deg 23% 77%) 68%,
-    hsl(221deg 23% 83%) 76%,
-    hsl(221deg 23% 89%) 85%,
-    hsl(221deg 23% 94%) 92%,
-    hsl(0deg 0% 100%) 100%
+    hsl(88deg 39% 60%) 0%,
+    hsl(77deg 38% 61%) 21%,
+    hsl(68deg 37% 63%) 30%,
+    hsl(58deg 36% 65%) 39%,
+    hsl(50deg 42% 68%) 46%,
+    hsl(44deg 47% 72%) 54%,
+    hsl(39deg 51% 75%) 61%,
+    hsl(34deg 53% 78%) 69%,
+    hsl(30deg 54% 81%) 79%,
+    hsl(26deg 52% 84%) 100%
   );
   background: linear-gradient(
-    0deg,
-    #f6dbc6 0%,
-    hsl(31deg 68% 86%) 11%,
-    hsl(37deg 61% 85%) 22%,
-    hsl(43deg 54% 84%) 33%,
-    hsl(52deg 46% 83%) 44%,
-    hsl(64deg 40% 82%) 56%,
-    hsl(77deg 42% 83%) 67%,
-    hsl(91deg 44% 83%) 78%,
-    hsl(108deg 45% 84%) 89%,
-    #c6ebcb 100%
+    180deg,
+    hsl(88deg 39% 60%) 0%,
+    hsl(77deg 38% 61%) 21%,
+    hsl(68deg 37% 63%) 30%,
+    hsl(58deg 36% 65%) 39%,
+    hsl(50deg 42% 68%) 46%,
+    hsl(44deg 47% 72%) 54%,
+    hsl(39deg 51% 75%) 61%,
+    hsl(34deg 53% 78%) 69%,
+    hsl(30deg 54% 81%) 79%,
+    hsl(26deg 52% 84%) 100%
   );
 }
 ::selection {
@@ -111,12 +111,12 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f6dbc6;
+  background: hsl(26deg 52% 84%);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 5px solid #f6dbc6;
+  border: 5px solid hsl(26deg 52% 84%);
 }
 
 .Overlay {
@@ -125,7 +125,7 @@ canvas {
   left: 0;
   z-index: 1;
   pointer-events: none;
-  color: $color-palette-5;
+  color: $color-palette-2;
   @media only screen and (max-width: 900px) {
     font-size: 0.5em;
     margin: 3px 7px;
