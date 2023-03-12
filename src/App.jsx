@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Overlay, Guide, Subheaders } from "./Html";
-import { ScrollControls, Scroll } from "@react-three/drei";
+import { ScrollControls, Scroll, Loader } from "@react-three/drei";
 import {
   Avatar,
   Baking,
@@ -11,6 +11,40 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
+const containerStyles = {
+  background: `linear-gradient(
+        180deg,
+        hsl(86deg 41% 71%) 0%,
+        hsl(75deg 40% 71%) 21%,
+        hsl(66deg 38% 71%) 30%,
+        hsl(57deg 39% 73%) 39%,
+        hsl(49deg 44% 75%) 46%,
+        hsl(43deg 48% 77%) 54%,
+        hsl(38deg 52% 79%) 61%,
+        hsl(34deg 54% 80%) 69%,
+        hsl(30deg 54% 82%) 79%,
+        hsl(26deg 52% 84%) 100%
+      )`,
+};
+const barStyles = {
+  height: "10px",
+  borderRadius: "7px",
+  background: " rgb(255, 255, 255)",
+  transition: "0.5s",
+};
+
+const innerStyles = {
+  background: "rgba(236, 236, 238, 0.253)",
+  borderRadius: "7px",
+  height: "10px",
+  width: "200px",
+};
+
+const dataStyles = {
+  fontSize: "1rem",
+  fontFamily: '"Indie Flower", cursive',
+};
+
 function App() {
   return (
     <>
@@ -60,6 +94,12 @@ function App() {
           </Scroll>
         </ScrollControls>
       </Canvas>
+      <Loader
+        containerStyles={containerStyles}
+        innerStyles={innerStyles}
+        barStyles={barStyles}
+        dataStyles={dataStyles}
+      />
       <Card />
     </>
   );
