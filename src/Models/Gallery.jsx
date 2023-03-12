@@ -7,7 +7,7 @@ const LinkMapper = {
   bipolar: "https://www.instagram.com/p/ColnPVVrUk7/",
   sunset: "https://www.instagram.com/p/Cnqv8vfuxZt/",
   workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
-  energy: "https://www.instagram.com/p/CkPZwRers63/",
+  sweet: "https://sweet-city.vercel.app/",
   stairs: "https://www.instagram.com/p/CkfQQrXuhyJ/",
   workspace: "https://www.instagram.com/p/Ci4g9rWu7hb/",
   booklovers: "https://www.instagram.com/p/CjCpRhquMhQ/",
@@ -63,7 +63,7 @@ export default () => {
           label="workaholic"
           flipY
         />
-        <ProjectLink geometry={nodes.energy.geometry} label="energy" />
+        <ProjectLink geometry={nodes.sweet.geometry} label="sweet" />
         <ProjectLink geometry={nodes.stairs.geometry} label="stairs" />
         <ProjectLink geometry={nodes.workspace.geometry} label="workspace" />
         <ProjectLink geometry={nodes.booklovers.geometry} label="booklovers" />

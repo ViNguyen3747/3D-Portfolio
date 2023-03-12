@@ -35,7 +35,7 @@ export default () => {
           top: "50vh",
         }}
       >
-        ✨Some of my works made in Blender
+        ✨Some of my works made in Threejs and Blender
       </div>
     </>
   );
