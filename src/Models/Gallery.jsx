@@ -8,8 +8,8 @@ const LinkMapper = {
   sunset: "https://www.instagram.com/p/Cnqv8vfuxZt/",
   workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
   sweet: "https://sweet-city.vercel.app/",
-  stairs: "https://www.instagram.com/p/CkfQQrXuhyJ/",
-  workspace: "https://www.instagram.com/p/Ci4g9rWu7hb/",
+  jeep: "https://jeep-zero-seven.netlify.app/",
+  workspace: "https://isometric-workspace.netlify.app/",
   booklovers: "https://www.instagram.com/p/CjCpRhquMhQ/",
 };
 
@@ -64,7 +64,7 @@ export default () => {
           flipY
         />
         <ProjectLink geometry={nodes.sweet.geometry} label="sweet" />
-        <ProjectLink geometry={nodes.stairs.geometry} label="stairs" />
+        <ProjectLink geometry={nodes.stairs.geometry} label="jeep" />
         <ProjectLink geometry={nodes.workspace.geometry} label="workspace" />
         <ProjectLink geometry={nodes.booklovers.geometry} label="booklovers" />
       </>
