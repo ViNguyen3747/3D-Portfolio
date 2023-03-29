@@ -3,9 +3,9 @@ import { useThree } from "@react-three/fiber";
 import { Suspense } from "react";
 
 const LinkMapper = {
-  strawberry: "https://www.instagram.com/p/CoQ-DSOLgea/",
-  bipolar: "https://www.instagram.com/p/ColnPVVrUk7/",
-  sunset: "https://www.instagram.com/p/Cnqv8vfuxZt/",
+  strawberry: "https://www.instagram.com/reel/CoQ-cLku1Jq/",
+  bipolar: "https://www.instagram.com/reel/ColXm1ONK8e/",
+  sunset: "https://www.instagram.com/reel/CnqvR5UIAvF/",
   workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
   sweet: "https://sweet-city.vercel.app/",
   jeep: "https://jeep-zero-seven.netlify.app/",
