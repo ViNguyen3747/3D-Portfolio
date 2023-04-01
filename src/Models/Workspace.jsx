@@ -11,8 +11,8 @@ export default (props) => {
   };
 
   return (
-    <Center position={[w, 0, 0]} scale={[w / 4, w / 4, w / 4]}>
-      <Float rotationIntensity={0.15}>
+    <Float rotationIntensity={0.15}>
+      <Center position={[w, 0, 0]} scale={[w / 4, w / 4, w / 4]}>
         <group {...props} dispose={null}>
           <primitive object={nodes.base} />
           <mesh
@@ -49,8 +49,8 @@ export default (props) => {
             material={nodes.name.material}
           />
         </group>
-      </Float>
-    </Center>
+      </Center>
+    </Float>
   );
 };
 

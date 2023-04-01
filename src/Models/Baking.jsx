@@ -8,8 +8,8 @@ export default (props) => {
   const { width: w, height: h } = useThree((state) => state.viewport);
 
   return (
-    <Center position={[w * 2, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
-      <Float rotationIntensity={0.15}>
+    <Float rotationIntensity={0.15}>
+      <Center position={[w * 2, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
         <group {...props} dispose={null}>
           <primitive object={nodes.base} />
           <ClickableItem isPrimitive label="omlette" object={nodes.omlette} />
@@ -17,8 +17,8 @@ export default (props) => {
           <ClickableItem isPrimitive label="loaf" object={nodes.loaf} />
           <ClickableItem isPrimitive label="piping" object={nodes.piping} />
         </group>
-      </Float>
-    </Center>
+      </Center>
+    </Float>
   );
 };
 
