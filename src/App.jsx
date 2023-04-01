@@ -85,7 +85,7 @@ const bg3 = `linear-gradient(
       #f6dbc6 100%
     )`;
 const containerStyles = {
-  background: bg2,
+  background: bg4,
 };
 function App() {
   const [bg, setBg] = useState(bg4);
