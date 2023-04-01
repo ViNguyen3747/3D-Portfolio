@@ -57,18 +57,19 @@ const bg1 = `linear-gradient(
       hsl(128deg 49% 85%) 100%
     )`;
 
-const bg4 = `linear-gradient(
-      180deg,
-      #62799d 0%,
-      hsl(218deg 23% 56%) 24%,
-      hsl(219deg 23% 61%) 38%,
-      hsl(219deg 23% 67%) 49%,
-      hsl(220deg 23% 72%) 59%,
-      hsl(220deg 23% 77%) 68%,
-      hsl(221deg 23% 83%) 76%,
-      hsl(221deg 23% 89%) 85%,
-      hsl(221deg 23% 94%) 92%,
-      hsl(0deg 0% 100%) 100%
+const bg5 = `linear-gradient(
+  180deg,
+  hsl(81deg 27% 55%) 0%,
+  hsl(81deg 27% 60%) 11%,
+  hsl(80deg 27% 65%) 22%,
+  hsl(80deg 27% 70%) 33%,
+  hsl(80deg 27% 74%) 44%,
+  hsl(79deg 27% 79%) 56%,
+  hsl(79deg 28% 85%) 67%,
+  hsl(79deg 28% 90%) 78%,
+  hsl(78deg 28% 95%) 89%,
+  hsl(0deg 0% 100%) 100%
+    
     )`;
 
 const bg3 = `linear-gradient(
@@ -84,11 +85,26 @@ const bg3 = `linear-gradient(
       hsl(18deg 65% 85%) 96%,
       #f6dbc6 100%
     )`;
+
+const bg4 = `linear-gradient(
+   180deg,
+      #62799d 0%,
+      hsl(218deg 23% 56%) 24%,
+      hsl(219deg 23% 61%) 38%,
+      hsl(219deg 23% 67%) 49%,
+      hsl(220deg 23% 72%) 59%,
+      hsl(220deg 23% 77%) 68%,
+      hsl(221deg 23% 83%) 76%,
+      hsl(221deg 23% 89%) 85%,
+      hsl(221deg 23% 94%) 92%,
+      hsl(0deg 0% 100%) 100%
+)`;
+
 const containerStyles = {
-  background: bg4,
+  background: bg5,
 };
 function App() {
-  const [bg, setBg] = useState(bg4);
+  const [bg, setBg] = useState(bg5);
   return (
     <>
       <Overlay />
@@ -98,6 +114,7 @@ function App() {
         <div class="main" id="bg2" onClick={() => setBg(bg2)} />
         <div class="main" id="bg3" onClick={() => setBg(bg3)} />
         <div class="main" id="bg4" onClick={() => setBg(bg4)} />
+        <div class="main" id="bg5" onClick={() => setBg(bg5)} />
       </div>
       <Canvas
         camera={{ position: [1, 5, 30], fov: 20 }}

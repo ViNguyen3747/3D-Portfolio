@@ -57,6 +57,7 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: overlay;
 }
 
 body {
@@ -81,17 +82,17 @@ canvas {
   color: white;
 }
 ::-webkit-scrollbar {
-  height: 15px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: white;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-palette-2;
+  background-color: $color-palette-4;
   border-radius: 10px;
-  border: 4px solid white;
+  border: 2px solid white;
 }
 
 .Overlay {
@@ -299,9 +300,9 @@ canvas {
       hsl(149deg 47% 80%) 79%,
       hsl(128deg 49% 85%) 100%
     );
-    transform: translateX(-60px) rotate(-45deg);
+    transform: translateX(-80px) rotate(-45deg);
     &:hover {
-      transform: translateX(-70px) rotate(-20deg);
+      transform: translateX(-90px) rotate(-20deg);
     }
   }
 
@@ -319,9 +320,9 @@ canvas {
       hsl(30deg 54% 82%) 79%,
       hsl(26deg 52% 84%) 100%
     );
-    transform: translateX(-40px) rotate(-45deg);
+    transform: translateX(-60px) rotate(-45deg);
     &:hover {
-      transform: translateX(-50px) rotate(-20deg);
+      transform: translateX(-70px) rotate(-20deg);
     }
   }
   #bg3 {
@@ -338,9 +339,9 @@ canvas {
       hsl(18deg 65% 85%) 96%,
       #f6dbc6 100%
     );
-    transform: translateX(-20px) rotate(-45deg);
+    transform: translateX(-40px) rotate(-45deg);
     &:hover {
-      transform: translateX(-30px) rotate(-20deg);
+      transform: translateX(-50px) rotate(-20deg);
     }
   }
   #bg4 {
@@ -357,7 +358,29 @@ canvas {
       hsl(221deg 23% 94%) 92%,
       hsl(0deg 0% 100%) 100%
     );
+    transform: translateX(-20px) rotate(-45deg);
+    &:hover {
+      transform: translateX(-30px) rotate(-20deg);
+    }
+  }
+  #bg5 {
+    background: linear-gradient(
+      180deg,
+      hsl(104deg 29% 50%) 0%,
+      hsl(103deg 29% 56%) 11%,
+      hsl(102deg 29% 61%) 22%,
+      hsl(102deg 29% 67%) 33%,
+      hsl(101deg 30% 72%) 44%,
+      hsl(101deg 30% 77%) 56%,
+      hsl(100deg 30% 83%) 67%,
+      hsl(100deg 30% 89%) 78%,
+      hsl(100deg 30% 94%) 89%,
+      hsl(0deg 0% 100%) 100%
+    );
     transform: rotate(-45deg);
+    &:hover {
+      transform: translate(-10px) rotate(-20deg);
+    }
   }
 }
 
