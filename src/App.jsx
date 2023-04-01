@@ -11,7 +11,7 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
-import { bg1, bg2, bg3, bg4, bg5 } from "./-lib/bacgrounds";
+import { bg1, bg2, bg3, bg4, bg5 } from "./-lib/backgrounds";
 const barStyles = {
   height: "10px",
   borderRadius: "7px",
