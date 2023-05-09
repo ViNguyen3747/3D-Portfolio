@@ -4,13 +4,13 @@ import { Suspense } from "react";
 
 const LinkMapper = {
   strawberry: "https://www.instagram.com/p/CoQ-DSOLgea/",
-  bipolar: "https://www.instagram.com/reel/ColXm1ONK8e/",
+  window: "https://seasonal-windows.vercel.app/",
   sunset: "https://www.instagram.com/reel/CnqvR5UIAvF/",
   workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
   sweet: "https://sweet-city.vercel.app/",
   jeep: "https://jeep-zero-seven.netlify.app/",
   workspace: "https://isometric-workspace.netlify.app/",
-  booklovers: "https://www.instagram.com/p/CjCpRhquMhQ/",
+  weather: "https://lowpoly-weather.vercel.app/",
 };
 
 const ProjectLink = ({ label, geometry, flipY = false }) => {
@@ -56,7 +56,7 @@ export default () => {
       <>
         <primitive object={nodes.frames} />
         <ProjectLink geometry={nodes.strawberry.geometry} label="strawberry" />
-        <ProjectLink geometry={nodes.bipolar.geometry} label="bipolar" />
+        <ProjectLink geometry={nodes.bipolar.geometry} label="window" />
         <ProjectLink geometry={nodes.sunset.geometry} label="sunset" flipY />
         <ProjectLink
           geometry={nodes.workaholic.geometry}
@@ -66,7 +66,7 @@ export default () => {
         <ProjectLink geometry={nodes.sweet.geometry} label="sweet" />
         <ProjectLink geometry={nodes.stairs.geometry} label="jeep" />
         <ProjectLink geometry={nodes.workspace.geometry} label="workspace" />
-        <ProjectLink geometry={nodes.booklovers.geometry} label="booklovers" />
+        <ProjectLink geometry={nodes.booklovers.geometry} label="weather" />
       </>
     </Center>
   );
