@@ -52,7 +52,7 @@ export default () => {
   const { width: w, height: h } = useThree((state) => state.viewport);
 
   return (
-    <Center position={[w * 3, 0, 0]} scale={[w / 7, w / 7, w / 7]}>
+    <Center position={[w * 3, 0, -1]} scale={[w / 7, w / 7, w / 7]}>
       <>
         <primitive object={nodes.frames} />
         <ProjectLink geometry={nodes.strawberry.geometry} label="strawberry" />

@@ -32,10 +32,10 @@ const dataStyles = {
 };
 
 const containerStyles = {
-  background: bg5,
+  background: bg3,
 };
 function App() {
-  const [bg, setBg] = useState(bg5);
+  const [bg, setBg] = useState(bg3);
   return (
     <>
       <Overlay />
