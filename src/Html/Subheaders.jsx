@@ -5,7 +5,7 @@ export default () => {
         className="subheaders"
         style={{ position: "absolute", left: "105vw", top: "20vh" }}
       >
-        Nice to meet ya! 😊
+        Xin chao, Nice to meet ya! 😊
       </div>
       <div
         className="subheaders"
@@ -15,7 +15,7 @@ export default () => {
           top: "10vh",
         }}
       >
-        Discover some interesting facts about myself via clickable items 😉
+        Discover some interesting facts about me from the clickable items 😉
       </div>
       <div
         className="subheaders"
@@ -35,7 +35,7 @@ export default () => {
           top: "50vh",
         }}
       >
-        ✨Some of my works made in Threejs and Blender
+        ✨Some of my works made with Threejs and Blender
       </div>
     </>
   );
