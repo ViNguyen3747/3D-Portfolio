@@ -3,9 +3,9 @@ import { useThree } from "@react-three/fiber";
 import { Suspense } from "react";
 
 const LinkMapper = {
-  strawberry: "https://www.instagram.com/p/CoQ-DSOLgea/",
+  windowView: "https://window-view.vercel.app/",
   window: "https://seasonal-windows.vercel.app/",
-  sunset: "https://www.instagram.com/reel/CnqvR5UIAvF/",
+  book: "https://books-quotes.vercel.app/",
   workaholic: "https://www.instagram.com/p/Cnbey5Jussg/",
   sweet: "https://sweet-city.vercel.app/",
   jeep: "https://jeep-zero-seven.netlify.app/",
@@ -55,9 +55,9 @@ export default () => {
     <Center position={[w * 3, 0, -1]} scale={[w / 7, w / 7, w / 7]}>
       <>
         <primitive object={nodes.frames} />
-        <ProjectLink geometry={nodes.strawberry.geometry} label="strawberry" />
+        <ProjectLink geometry={nodes.strawberry.geometry} label="windowView" />
         <ProjectLink geometry={nodes.bipolar.geometry} label="window" />
-        <ProjectLink geometry={nodes.sunset.geometry} label="sunset" flipY />
+        <ProjectLink geometry={nodes.sunset.geometry} label="book" flipY />
         <ProjectLink
           geometry={nodes.workaholic.geometry}
           label="workaholic"
