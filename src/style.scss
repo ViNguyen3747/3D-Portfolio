@@ -5,16 +5,15 @@ $color-palette-3: #c8a086;
 $color-palette-4: #efb98f;
 $color-palette-5: #d3896d;
 $text-color: #000000;
-@mixin shadow($color) {
-  border: 1px solid $color;
-  -webkit-box-shadow: 0.1em 0.2em 0 0 $color;
-  box-shadow: 0.1em 0.2em 0 0 $color;
-}
 
-@mixin cardStyle($bg) {
+@mixin cardStyle() {
   position: absolute;
-  background-color: $bg;
   overflow: hidden;
+  background-color: #ffffff95;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 5px #ffffff95;
+  font-size: small;
+  border-radius: 1em;
 }
 
 @mixin subHeadersResponsive($max-width, $font-size, $margin-top) {
@@ -112,15 +111,13 @@ canvas {
 }
 
 #card {
-  @include cardStyle(#ffffffcf);
+  @include cardStyle();
   top: 50%;
   right: 0;
   width: 30%;
   height: fit-content;
   line-height: 1.7em;
   padding: 0.9em 0.1em 0.1em 1em;
-  border-radius: 2em 0.5em 0.5em 2em;
-  @include shadow($color-palette-2);
   button {
     color: $color-palette-1;
     position: relative;
@@ -161,10 +158,9 @@ canvas {
 .subheaders {
   background-color: rgba(255, 255, 255, 0.645);
   width: max-content;
-  border-radius: 2em;
   line-height: 2em;
   padding: 0.5em 1em 0.5em 1em;
-  @include shadow($color-palette-2);
+  @include cardStyle();
   @media only screen and (max-width: 900px) {
     @include subHeadersResponsive(120px, 0.5em, 13vh);
   }
@@ -188,7 +184,7 @@ canvas {
 }
 
 .navigation-guide {
-  @include cardStyle(#e8e5e5af);
+  @include cardStyle();
   height: fit-content;
   max-height: 50vh;
   left: 0;
@@ -200,7 +196,6 @@ canvas {
   border-radius: 0 5% 5% 0;
   line-height: 2em;
   border-left: 0;
-  @include shadow($color-palette-2);
   .item-list {
     display: grid;
     grid-template-columns: repeat(3, 80px);
