@@ -10,9 +10,9 @@ const CardLists = {
   omlette:
     "🍜 I learn how to cook from my dad, as he's the main chef of my family.",
   rolling:
-    "🥐 I love baking. One of the best things about baking is to get creative: taking one idea and putting your own twist on it.",
+    "🥐 I love baking. One of the best things about baking is to get creative: taking one idea and putting your own twist on it ✨",
   computer:
-    "Just an ordinary UI developer 👩‍💻 discovering new hobbies in 3D Websites and 3D modeling.",
+    "I'm just an ordinary UI developer 👩‍💻 discovering new hobbies in 3D Websites and 3D modeling.",
   headphones:
     "I don't play games, but I really love listening to game tracks 🎶 and watching video game cinematics.",
   piping:
