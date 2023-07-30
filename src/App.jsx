@@ -1,7 +1,7 @@
-import { Suspense, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Suspense, useState, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Overlay, Guide, Subheaders } from "./Html";
-import { ScrollControls, Scroll, Loader } from "@react-three/drei";
+import { ScrollControls, Scroll, Loader, Html } from "@react-three/drei";
 import {
   Avatar,
   Baking,
@@ -11,6 +11,7 @@ import {
   Gallery,
 } from "./Models";
 import Card from "./Models/Helper/Card";
+import { Home, Office, Project, Kitchen, Social } from "./Models/Helper/Icons";
 import { bg1, bg2, bg3, bg4, bg5 } from "./-lib/backgrounds";
 const barStyles = {
   height: "10px",
@@ -34,18 +35,81 @@ const dataStyles = {
 const containerStyles = {
   background: bg3,
 };
-function App() {
-  const [bg, setBg] = useState(bg3);
+
+const Carousel = () => {
+  const { width: w, height: h } = useThree((state) => state.viewport);
+  const homeRef = useRef();
+  const workSpaceRef = useRef();
+  const projectRef = useRef();
+  const bakingRef = useRef();
+  const socialMediaRef = useRef();
+
+  useFrame(() => {
+    homeRef.current.position.x = 0;
+    workSpaceRef.current.position.x = w;
+    projectRef.current.position.x = w * 1.9;
+    bakingRef.current.position.x = w * 2.9;
+    socialMediaRef.current.position.x = w * 4;
+  });
   return (
     <>
+      <mesh ref={homeRef}>
+        <Html className="home" />
+      </mesh>
+      <mesh ref={workSpaceRef}>
+        <Html className="workspace" />
+      </mesh>
+      <mesh ref={projectRef}>
+        <Html className="project" />
+      </mesh>
+      <mesh ref={bakingRef}>
+        <Html className="kitchen" />
+      </mesh>
+      <mesh ref={socialMediaRef}>
+        <Html className="social" />
+      </mesh>
+    </>
+  );
+};
+function App() {
+  const [bg, setBg] = useState(bg3);
+
+  const handleClick = (destination) => {
+    const className = document.getElementsByClassName(destination);
+    if (className) {
+      className[0].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
+  };
+  return (
+    <>
+      <div id="carousel">
+        <div onClick={() => handleClick("home")}>
+          <Home />
+        </div>
+        <div onClick={() => handleClick("workspace")}>
+          <Office />
+        </div>
+        <div onClick={() => handleClick("project")}>
+          <Project />
+        </div>
+        <div onClick={() => handleClick("kitchen")}>
+          <Kitchen />
+        </div>
+        <div onClick={() => handleClick("social")}>
+          <Social />
+        </div>
+      </div>
       <Overlay />
       <Guide />
-      <div class="background">
-        <div class="main" id="bg1" onClick={() => setBg(bg1)} />
-        <div class="main" id="bg2" onClick={() => setBg(bg2)} />
-        <div class="main" id="bg3" onClick={() => setBg(bg3)} />
-        <div class="main" id="bg4" onClick={() => setBg(bg4)} />
-        <div class="main" id="bg5" onClick={() => setBg(bg5)} />
+      <div className="background">
+        <div className="main" id="bg1" onClick={() => setBg(bg1)} />
+        <div className="main" id="bg2" onClick={() => setBg(bg2)} />
+        <div className="main" id="bg3" onClick={() => setBg(bg3)} />
+        <div className="main" id="bg4" onClick={() => setBg(bg4)} />
+        <div className="main" id="bg5" onClick={() => setBg(bg5)} />
       </div>
       <Canvas
         camera={{ position: [1, 5, 30], fov: 20 }}
@@ -93,6 +157,7 @@ function App() {
             </Suspense>
           </Scroll>
         </ScrollControls>
+        <Carousel />
       </Canvas>
       <Loader
         containerStyles={containerStyles}

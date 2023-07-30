@@ -9,7 +9,7 @@ export default (props) => {
 
   return (
     <Float rotationIntensity={0.15}>
-      <Center position={[w * 3, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
+      <Center position={[w * 3.2, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
         <group {...props} dispose={null}>
           <primitive object={nodes.base} />
           <ClickableItem isPrimitive label="omlette" object={nodes.omlette} />

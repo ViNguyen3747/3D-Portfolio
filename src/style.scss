@@ -425,3 +425,49 @@ canvas {
     transform: translateX(40px);
   }
 }
+
+#carousel {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  font-size: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: -1.2rem;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: -2rem;
+  }
+  svg {
+    width: 3rem;
+    transition: 0.3s ease;
+    -webkit-box-reflect: below -3.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    @media only screen and (max-width: 900px) {
+      width: 2rem;
+      -webkit-box-reflect: below -4.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    }
+  }
+  svg:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  #kitchen {
+    -webkit-box-reflect: below -4.2rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    @media only screen and (max-width: 900px) {
+      -webkit-box-reflect: below -4.9rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    }
+  }
+  #office {
+    -webkit-box-reflect: below -3.8rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    @media only screen and (max-width: 900px) {
+      -webkit-box-reflect: below -4.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    }
+  }
+  #home,
+  #globe {
+    -webkit-box-reflect: below -3.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    @media only screen and (max-width: 900px) {
+      -webkit-box-reflect: below -4.4rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    }
+  }
+}
