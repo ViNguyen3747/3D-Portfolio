@@ -8,6 +8,7 @@ const LinkMapper = {
   github: "https://github.com/ViNguyen3747",
   insta: "https://www.instagram.com/v_nguyen_711/",
   linkedin: "https://www.linkedin.com/in/thi-kieu-vi-nguyen-0894a919a/",
+  twitter: "https://twitter.com/ThiKieuViNguye1",
 };
 function SocialMediaLink({ obj, label, w, h }) {
   const handleLink = () => {
@@ -49,6 +50,7 @@ export default () => {
       <SocialMediaLink obj={nodes.github} label={"github"} w={w} h={h} />
       <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} h={h} />
       <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.twitter} label={"twitter"} w={w} h={h} />
     </Center>
   );
 };
