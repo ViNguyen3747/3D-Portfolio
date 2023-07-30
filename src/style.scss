@@ -80,7 +80,7 @@ canvas {
   color: white;
 }
 ::-webkit-scrollbar {
-  height: 12px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -88,9 +88,8 @@ canvas {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-palette-4;
+  background-color: $color-palette-5;
   border-radius: 10px;
-  border: 2px solid white;
 }
 
 .Overlay {
