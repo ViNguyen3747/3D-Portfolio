@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
 $color-palette-1: #9fa26e;
 $color-palette-2: #dad7b4;
 $color-palette-3: #c8a086;
 $color-palette-4: #efb98f;
 $color-palette-5: #d3896d;
-$text-color: #000000;
+$text-color: #1e1e1e;
 
 @mixin cardStyle() {
   position: absolute;
@@ -63,7 +63,7 @@ body {
   font-size: 15px;
   letter-spacing: 2px;
   overscroll-behavior: none;
-  font-family: "Indie Flower", cursive;
+  font-family: "Chakra Petch", sans-serif;
   @media only screen and (max-width: 900px) {
     font-weight: 500;
   }
@@ -126,7 +126,7 @@ canvas {
     cursor: pointer;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    font-family: "Indie Flower", cursive;
+    font-family: "Chakra Petch", sans-serif;
     @media only screen and (max-width: 900px) {
       letter-spacing: 1px;
       font-weight: 500;
@@ -434,7 +434,7 @@ canvas {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  margin-bottom: -1.2rem;
+  margin-bottom: -1.3rem;
   @media only screen and (max-width: 900px) {
     margin-bottom: -2rem;
   }
