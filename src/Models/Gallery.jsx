@@ -75,7 +75,7 @@ export default () => {
 
   return (
     <Center
-      position={[w * 3, -0.3, -2]}
+      position={[w * 2, -0.3, -2]}
       scale={w / 8}
       rotation={[-Math.PI / 10, 0.002, 0.011]}
     >
