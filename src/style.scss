@@ -66,6 +66,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   @media only screen and (max-width: 900px) {
     font-weight: 500;
+    letter-spacing: 1px;
   }
   @media only screen and (min-width: 900px) {
     font-weight: 600;
@@ -143,6 +144,9 @@ canvas {
       -webkit-box-shadow: 0 0 0 0 $color-palette-2;
       box-shadow: 0 0 0 0 $color-palette-2;
     }
+  }
+  p {
+    margin-top: 0;
   }
   @media only screen and (max-width: 900px) {
     @include cardResponsive(0.5em, 0px, 0.1px, 0.6px);
@@ -270,6 +274,9 @@ canvas {
   display: grid;
   margin: 30px;
   place-items: center;
+  @media only screen and (max-width: 900px) {
+    margin: 20px;
+  }
   .main {
     width: 25px;
     height: 25px;
@@ -278,6 +285,10 @@ canvas {
     position: absolute;
     border: white 2px solid;
     border-radius: 4px;
+    @media only screen and (max-width: 900px) {
+      width: 15px;
+      height: 15px;
+    }
   }
   #bg1 {
     background: linear-gradient(
