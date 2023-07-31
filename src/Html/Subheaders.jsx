@@ -22,7 +22,7 @@ export default () => {
         style={{
           position: "absolute",
           left: "180vw",
-          top: "50vh",
+          top: "30vh",
         }}
       >
         ✨Some of my works made with Threejs and Blender. Click on each for the

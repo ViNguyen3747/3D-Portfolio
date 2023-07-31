@@ -4,7 +4,7 @@ $color-palette-2: #dad7b4;
 $color-palette-3: #c8a086;
 $color-palette-4: #efb98f;
 $color-palette-5: #d3896d;
-$text-color: #414141;
+$text-color: #53553c;
 
 @mixin cardStyle() {
   position: absolute;
@@ -29,6 +29,7 @@ $text-color: #414141;
   $box-shadows-2
 ) {
   font-size: $font-size;
+  font-weight: 500;
   button {
     font-size: $font-size;
     border: $border-size solid $color-palette-2;
@@ -161,7 +162,8 @@ canvas {
 .subheaders {
   background-color: rgba(255, 255, 255, 0.645);
   width: max-content;
-  line-height: 2em;
+  line-height: 1.5rem;
+  font-weight: 500;
   padding: 0.5em 1em 0.5em 1em;
   @include cardStyle();
   @media only screen and (max-width: 900px) {
