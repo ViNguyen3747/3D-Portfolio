@@ -29,7 +29,7 @@ const innerStyles = {
 
 const dataStyles = {
   fontSize: "1rem",
-  fontFamily: '"Indie Flower", cursive',
+  fontFamily: '"Chakra Petch", sans-serif',
 };
 
 const containerStyles = {
