@@ -25,7 +25,8 @@ export default () => {
           top: "50vh",
         }}
       >
-        ✨Some of my works made with Threejs and Blender
+        ✨Some of my works made with Threejs and Blender. Click on each for the
+        experience!
       </div>
       <div
         className="subheaders"
