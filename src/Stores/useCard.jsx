@@ -4,6 +4,7 @@ const CardLists = {
   coffee:
     "I love love love coffee ☕. I prefer my coffee black as I can taste the sweetness of the black coffee.",
   name: "⭐ My name is Vi, pronounced as 'V'. It's actually a typo made by my Dad. My name is supposed to be 'Vy', which means 'pretty', and 'Vi' means 'tiny' in Vietnamese...",
+  code: "a JavaScript enthusiast / in love with ReactJS / a 3d modeling and Three.js learner / always eager to learn and expand knowledge",
   books:
     "I enjoy reading fantasy 🗡️ books. My favorite series is the Kane Chronicles by Rick Riordan",
   loaf: "I get my passion for baking from my mom. 🍞 And I'm the only one in the family not lazy to learn baking from her haha",

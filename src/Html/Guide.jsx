@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const items = [
+  "code",
   "books",
   "coffee",
   "computer",

@@ -28,11 +28,7 @@ export default (props) => {
           />
           <ClickableItem isPrimitive label="computer" object={nodes.computer} />
           <ClickableItem isPrimitive label="books" object={nodes.books} />
-          <ClickableItem
-            label="coffee"
-            geometry={nodes.coffee.geometry}
-            material={nodes.coffee.material}
-          />
+          <ClickableItem label="coffee" isPrimitive object={nodes.coffee} />
           <ClickableItem
             isPrimitive
             label="headphones"
@@ -47,6 +43,11 @@ export default (props) => {
             label="name"
             geometry={nodes.name.geometry}
             material={nodes.name.material}
+          />
+          <ClickableItem
+            label="code"
+            geometry={nodes.code.geometry}
+            material={nodes.code.material}
           />
         </group>
       </Center>
