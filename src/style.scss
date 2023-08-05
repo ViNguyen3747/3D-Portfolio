@@ -227,6 +227,7 @@ canvas {
   height: 400px;
   position: absolute;
   padding-top: 10px;
+  pointer-events: none;
 }
 .toggle-button {
   position: absolute;
@@ -396,6 +397,7 @@ canvas {
       transform: translate(155px) rotate(-20deg);
     }
   }
+  pointer-events: none;
 }
 
 @-webkit-keyframes slide-in-left {
@@ -492,6 +494,7 @@ canvas {
       -webkit-box-reflect: below -4.4rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
   }
+  pointer-events: none;
 }
 
 #welcome {

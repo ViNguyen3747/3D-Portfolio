@@ -91,6 +91,13 @@ const Welcome = () => {
         dimContainer.style.marginRight = "5px";
       } else if (step === 3) {
         dimContainer.style.height = "0";
+      } else if (step === 4) {
+        let carousel = document.getElementById("carousel");
+        let backgroundSwitcher = document.getElementById("background");
+        let guide = document.getElementById("guide");
+        carousel.style.pointerEvents = "visible";
+        backgroundSwitcher.style.pointerEvents = "visible";
+        guide.style.pointerEvents = "visible";
       }
     }
   };
@@ -106,6 +113,7 @@ const Welcome = () => {
     <>
       {step < 5 && (
         <>
+          <div id="cover" />
           <div id="dim-container" />
           <div id="welcome">
             <div>

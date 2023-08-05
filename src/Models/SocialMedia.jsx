@@ -6,7 +6,7 @@ const LinkMapper = {
   email: "mailto:vinguyen1172000@gmail.com",
   github: "https://github.com/ViNguyen3747",
   insta: "https://www.instagram.com/v_nguyen_711/",
-  linkedin: "https://www.linkedin.com/in/thi-kieu-vi-nguyen-0894a919a/",
+  linkedin: "https://www.linkedin.com/in/vi-nguyen-0894a919a/",
   twitter: "https://twitter.com/ThiKieuViNguye1",
 };
 function SocialMediaLink({ obj, label, w, h }) {
