@@ -71,6 +71,55 @@ const Carousel = () => {
     </>
   );
 };
+const Welcome = () => {
+  const [step, setStep] = useState(0);
+  const handleNextStep = (next) => {
+    let dimContainer = document.getElementById("dim-container");
+    if (next) {
+      setStep((prev) => prev + 1);
+      if (step === 0) {
+        dimContainer.style.top = "15.5vh";
+        dimContainer.style.height = "60px";
+      }
+      if (step === 1) {
+        dimContainer.style.top = "90vh";
+        dimContainer.style.width = "100vw";
+      } else if (step === 2) {
+        dimContainer.style.right = "0";
+        dimContainer.style.top = "0";
+        dimContainer.style.width = "130px";
+        dimContainer.style.marginRight = "5px";
+      } else if (step === 3) {
+        dimContainer.style.height = "0";
+      }
+    }
+  };
+
+  const message = [
+    "Before you get started, let me show you a quick guide",
+    "Throughout the experience, you could find some fun facts about me by clicking on hidden objects. This helper lists all items if you miss any",
+    "You can either scroll right or use this carousel to go to each section of the web page",
+    `I love colors! I added this background-color switcher just simply because I couldn't decide which one to use ^^`,
+    "That's it! Hope you enjoy the experience!!!",
+  ];
+  return (
+    <>
+      {step < 5 && (
+        <>
+          <div id="dim-container" />
+          <div id="welcome">
+            <div>
+              <p> {message[step]}</p>
+              <div id="btn">
+                <button onClick={() => handleNextStep(true)}>{">"}</button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </>
+  );
+};
 function App() {
   const [bg, setBg] = useState(bg3);
 
@@ -85,6 +134,7 @@ function App() {
   };
   return (
     <>
+      <Welcome />
       <div id="carousel">
         <div onClick={() => handleClick("home")}>
           <Home />
@@ -104,7 +154,7 @@ function App() {
       </div>
       <Overlay />
       <Guide />
-      <div className="background">
+      <div id="background">
         <div className="main" id="bg1" onClick={() => setBg(bg1)} />
         <div className="main" id="bg2" onClick={() => setBg(bg2)} />
         <div className="main" id="bg3" onClick={() => setBg(bg3)} />

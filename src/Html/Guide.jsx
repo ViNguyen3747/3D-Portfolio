@@ -21,7 +21,7 @@ export default () => {
     setIsOpen((prev) => !prev);
   };
   return (
-    <>
+    <div id="guide">
       <div
         className={`toggle-button  ${isOpen && "toggle-active"}`}
         onClick={(e) => handleToggle(e)}
@@ -50,6 +50,6 @@ export default () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };

@@ -16,10 +16,11 @@ $text-color: #53553c;
   border-radius: 1em;
 }
 
-@mixin subHeadersResponsive($max-width, $font-size, $margin-top) {
+@mixin subHeadersResponsive($max-width, $font-size, $margin-top, $line-height) {
   max-width: $max-width;
   font-size: $font-size;
   margin-top: $margin-top;
+  line-height: $line-height;
 }
 
 @mixin cardResponsive(
@@ -162,18 +163,17 @@ canvas {
 .subheaders {
   background-color: rgba(255, 255, 255, 0.645);
   width: max-content;
-  line-height: 1.5rem;
   font-weight: 500;
   padding: 0.5em 1em 0.5em 1em;
   @include cardStyle();
   @media only screen and (max-width: 900px) {
-    @include subHeadersResponsive(120px, 0.5em, 13vh);
+    @include subHeadersResponsive(120px, 0.5em, 13vh, 0.8rem);
   }
   @media only screen and (min-width: 900px) {
-    @include subHeadersResponsive(150px, 0.7em, 15vh);
+    @include subHeadersResponsive(150px, 0.7em, 15vh, 1.2rem);
   }
   @media only screen and (min-width: 1200px) {
-    @include subHeadersResponsive(300px, 1em, 0);
+    @include subHeadersResponsive(300px, 1em, 0, 1.5rem);
   }
 }
 
@@ -191,13 +191,12 @@ canvas {
 .navigation-guide {
   @include cardStyle();
   height: fit-content;
-  max-height: 50vh;
   left: 0;
-  top: 16vh;
   transition: transform 0.35s ease-out;
   z-index: 1;
   cursor: pointer;
   padding: 1em;
+  margin-top: 1.5em;
   border-radius: 0 5% 5% 0;
   line-height: 2em;
   border-left: 0;
@@ -213,16 +212,24 @@ canvas {
     @include guideResponsive(190px, 0.8em, 60px, 50px);
   }
   @media only screen and (min-width: 1200px) {
-    @include guideResponsive(200px, 1em, 70px, 60px);
+    @include guideResponsive(220px, 1em, 70px, 60px);
   }
 }
 .is-active {
   transform: translateX(-3px);
 }
 
+#guide {
+  z-index: 1;
+  border-radius: 0 10px 10px 0;
+  top: 15vh;
+  width: 60px;
+  height: 400px;
+  position: absolute;
+  padding-top: 10px;
+}
 .toggle-button {
   position: absolute;
-  top: 15vh;
   z-index: 2;
   transform: translateX(2px);
   transition: transform 0.35s ease-out;
@@ -268,17 +275,16 @@ canvas {
 }
 
 // background color
-.background {
+#background {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
-  display: grid;
-  margin: 30px;
-  place-items: center;
-  @media only screen and (max-width: 900px) {
-    margin: 20px;
-  }
+  margin: 5px;
+  height: 50px;
+  width: 140px;
+  border-radius: 10px;
+
   .main {
     width: 25px;
     height: 25px;
@@ -287,6 +293,8 @@ canvas {
     position: absolute;
     border: white 2px solid;
     border-radius: 4px;
+    margin-top: 10px;
+    margin-left: -65px;
     @media only screen and (max-width: 900px) {
       width: 15px;
       height: 15px;
@@ -306,9 +314,9 @@ canvas {
       hsl(149deg 47% 80%) 79%,
       hsl(128deg 49% 85%) 100%
     );
-    transform: translateX(-80px) rotate(-45deg);
+    transform: translateX(85px) rotate(-45deg);
     &:hover {
-      transform: translateX(-90px) rotate(-20deg);
+      transform: translateX(75px) rotate(-20deg);
     }
   }
 
@@ -326,9 +334,9 @@ canvas {
       hsl(30deg 54% 82%) 79%,
       hsl(26deg 52% 84%) 100%
     );
-    transform: translateX(-60px) rotate(-45deg);
+    transform: translateX(105px) rotate(-45deg);
     &:hover {
-      transform: translateX(-70px) rotate(-20deg);
+      transform: translateX(95px) rotate(-20deg);
     }
   }
   #bg3 {
@@ -345,9 +353,9 @@ canvas {
       hsl(18deg 65% 85%) 96%,
       #f6dbc6 100%
     );
-    transform: translateX(-40px) rotate(-45deg);
+    transform: translateX(125px) rotate(-45deg);
     &:hover {
-      transform: translateX(-50px) rotate(-20deg);
+      transform: translateX(115px) rotate(-20deg);
     }
   }
   #bg4 {
@@ -364,9 +372,9 @@ canvas {
       hsl(221deg 23% 94%) 92%,
       hsl(0deg 0% 100%) 100%
     );
-    transform: translateX(-20px) rotate(-45deg);
+    transform: translateX(145px) rotate(-45deg);
     &:hover {
-      transform: translateX(-30px) rotate(-20deg);
+      transform: translateX(135px) rotate(-20deg);
     }
   }
   #bg5 {
@@ -383,9 +391,9 @@ canvas {
       hsl(78deg 28% 95%) 89%,
       hsl(0deg 0% 100%) 100%
     );
-    transform: rotate(-45deg);
+    transform: translate(165px) rotate(-45deg);
     &:hover {
-      transform: translate(-10px) rotate(-20deg);
+      transform: translate(155px) rotate(-20deg);
     }
   }
 }
@@ -441,7 +449,8 @@ canvas {
 
 #carousel {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  border-radius: 10px 10px 0 0;
   bottom: 0;
   font-size: 2rem;
   display: flex;
@@ -483,4 +492,51 @@ canvas {
       -webkit-box-reflect: below -4.4rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
   }
+}
+
+#welcome {
+  z-index: 4;
+  position: absolute;
+  top: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  > div {
+    @include cardStyle();
+    background-color: #ffffff63;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 10px;
+    height: 40vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  #btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    button {
+      cursor: pointer;
+      color: white;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+    }
+  }
+}
+
+#dim-container {
+  box-shadow: 0 0 0 100vmax rgba(71, 71, 71, 0.41);
+  z-index: 4;
+  width: 60px;
+  height: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 5px;
+  transition: 0.4s ease;
 }
