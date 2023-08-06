@@ -14,7 +14,7 @@ export default () => {
         dimContainer.style.width = "60px";
       }
       if (step === 1) {
-        dimContainer.style.top = "90vh";
+        dimContainer.style.top = "91vh";
         dimContainer.style.width = "100vw";
       } else if (step === 2) {
         dimContainer.style.right = "0";
