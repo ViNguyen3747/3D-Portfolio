@@ -533,16 +533,41 @@ canvas {
       background-color: rgba(255, 255, 255, 0);
       border: none;
       font-size: 1.8rem;
+      display: flex;
+      width: 70px;
+      justify-content: space-between;
+      > div:nth-child(1) {
+        animation: opacity-animation 1.3s infinite 0.2s;
+      }
+      > div:nth-child(2) {
+        animation: opacity-animation 1.3s infinite 0.4s;
+      }
+      > div:nth-child(3) {
+        animation: opacity-animation 1.3s infinite 0.6s;
+      }
     }
+  }
+}
+@keyframes opacity-animation {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
   }
 }
 
 #dim-container {
   box-shadow: 0 0 0 100vmax rgba(71, 71, 71, 0.41);
   z-index: 4;
-  width: 60px;
+  width: 0;
   height: 0;
-  top: 0;
+  top: 15.5vh;
   position: absolute;
   border-radius: 5px;
   transition: 0.4s ease;

@@ -11,6 +11,7 @@ export default () => {
       if (step === 0) {
         dimContainer.style.top = "15.5vh";
         dimContainer.style.height = "60px";
+        dimContainer.style.width = "60px";
       }
       if (step === 1) {
         dimContainer.style.top = "90vh";
@@ -49,7 +50,11 @@ export default () => {
         <div>
           <p> {message[step]}</p>
           <div id="btn">
-            <button onClick={() => handleNextStep(true)}>{">>>"}</button>
+            <button onClick={() => handleNextStep(true)}>
+              <div>{">"}</div>
+              <div>{">"}</div>
+              <div>{">"}</div>
+            </button>
           </div>
         </div>
       </div>
