@@ -5,7 +5,7 @@ import ClickableItem from "./Helper/ClickableItem";
 
 export default (props) => {
   const { nodes } = useGLTF("./Models/baking.glb");
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
 
   return (
     <Float rotationIntensity={0.15}>

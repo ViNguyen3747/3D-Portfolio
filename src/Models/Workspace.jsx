@@ -5,7 +5,7 @@ import ClickableItem from "./Helper/ClickableItem";
 
 export default (props) => {
   const { nodes } = useGLTF("./Models/workspace.glb");
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   const handleResume = () => {
     window.open("/resume.pdf");
   };

@@ -10,7 +10,7 @@ export default (props) => {
     if (!avatarRef.current) return;
     avatarRef.current.rotation.y += delta * 0.4;
   });
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   return (
     <Center position={[w / 2, 0, 0]} scale={[w / 6, w / 6, w / 6]}>
       <group {...props} dispose={null}>

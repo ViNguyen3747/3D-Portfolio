@@ -3,7 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 
 export default () => {
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   const homeRef = useRef();
   const workSpaceRef = useRef();
   const projectRef = useRef();

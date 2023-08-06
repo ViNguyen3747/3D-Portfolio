@@ -9,7 +9,7 @@ const LinkMapper = {
   linkedin: "https://www.linkedin.com/in/vi-nguyen-0894a919a/",
   twitter: "https://twitter.com/ThiKieuViNguye1",
 };
-function SocialMediaLink({ obj, label, w, h }) {
+function SocialMediaLink({ obj, label, w }) {
   const handleLink = () => {
     window.open(LinkMapper[label]);
   };
@@ -40,15 +40,15 @@ function SocialMediaLink({ obj, label, w, h }) {
 export default () => {
   const { nodes } = useGLTF("./Models/socialmedia.glb");
 
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   return (
     <Center position={[w * 4, 0, 0]}>
-      <SocialMediaLink obj={nodes.be} label={"be"} w={w} h={h} />
-      <SocialMediaLink obj={nodes.email} label={"email"} w={w} h={h} />
-      <SocialMediaLink obj={nodes.github} label={"github"} w={w} h={h} />
-      <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} h={h} />
-      <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} h={h} />
-      <SocialMediaLink obj={nodes.twitter} label={"twitter"} w={w} h={h} />
+      <SocialMediaLink obj={nodes.be} label={"be"} w={w} />
+      <SocialMediaLink obj={nodes.email} label={"email"} w={w} />
+      <SocialMediaLink obj={nodes.github} label={"github"} w={w} />
+      <SocialMediaLink obj={nodes.insta} label={"insta"} w={w} />
+      <SocialMediaLink obj={nodes.linkdin} label={"linkedin"} w={w} />
+      <SocialMediaLink obj={nodes.twitter} label={"twitter"} w={w} />
     </Center>
   );
 };

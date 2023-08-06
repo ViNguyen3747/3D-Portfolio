@@ -1,16 +1,3 @@
-const bg2 = `linear-gradient(
-  180deg,
-  hsl(86deg 41% 71%) 0%,
-  hsl(75deg 40% 71%) 21%,
-  hsl(66deg 38% 71%) 30%,
-  hsl(57deg 39% 73%) 39%,
-  hsl(49deg 44% 75%) 46%,
-  hsl(43deg 48% 77%) 54%,
-  hsl(38deg 52% 79%) 61%,
-  hsl(34deg 54% 80%) 69%,
-  hsl(30deg 54% 82%) 79%,
-  hsl(26deg 52% 84%) 100%
-)`;
 const bg1 = `linear-gradient(
   180deg,
   hsl(216deg 27% 61%) 0%,
@@ -25,18 +12,18 @@ const bg1 = `linear-gradient(
   hsl(128deg 49% 85%) 100%
 )`;
 
-const bg5 = `linear-gradient(
+const bg2 = `linear-gradient(
   180deg,
-  hsl(81deg 27% 55%) 0%,
-  hsl(81deg 27% 60%) 11%,
-  hsl(80deg 27% 65%) 22%,
-  hsl(80deg 27% 70%) 33%,
-  hsl(80deg 27% 74%) 44%,
-  hsl(79deg 27% 79%) 56%,
-  hsl(79deg 28% 85%) 67%,
-  hsl(79deg 28% 90%) 78%,
-  hsl(78deg 28% 95%) 89%,
-  hsl(0deg 0% 100%) 100%
+  hsl(86deg 41% 71%) 0%,
+  hsl(75deg 40% 71%) 21%,
+  hsl(66deg 38% 71%) 30%,
+  hsl(57deg 39% 73%) 39%,
+  hsl(49deg 44% 75%) 46%,
+  hsl(43deg 48% 77%) 54%,
+  hsl(38deg 52% 79%) 61%,
+  hsl(34deg 54% 80%) 69%,
+  hsl(30deg 54% 82%) 79%,
+  hsl(26deg 52% 84%) 100%
 )`;
 
 const bg3 = `linear-gradient(
@@ -64,6 +51,20 @@ const bg4 = `linear-gradient(
   hsl(221deg 23% 83%) 76%,
   hsl(221deg 23% 89%) 85%,
   hsl(221deg 23% 94%) 92%,
+  hsl(0deg 0% 100%) 100%
+)`;
+
+const bg5 = `linear-gradient(
+  180deg,
+  hsl(81deg 27% 55%) 0%,
+  hsl(81deg 27% 60%) 11%,
+  hsl(80deg 27% 65%) 22%,
+  hsl(80deg 27% 70%) 33%,
+  hsl(80deg 27% 74%) 44%,
+  hsl(79deg 27% 79%) 56%,
+  hsl(79deg 28% 85%) 67%,
+  hsl(79deg 28% 90%) 78%,
+  hsl(78deg 28% 95%) 89%,
   hsl(0deg 0% 100%) 100%
 )`;
 
