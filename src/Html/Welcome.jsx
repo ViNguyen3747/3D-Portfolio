@@ -19,9 +19,9 @@ export default () => {
         dimContainer.style.right = "0";
         dimContainer.style.top = "0";
         dimContainer.style.width = "130px";
-        dimContainer.style.marginRight = "5px";
+        dimContainer.style.marginRight = "5.5px";
       } else if (step === 3) {
-        dimContainer.style.height = "0";
+        dimContainer.style.width = "0";
       } else if (step === 4) {
         let carousel = document.getElementById("carousel");
         let backgroundSwitcher = document.getElementById("background");
@@ -49,7 +49,7 @@ export default () => {
         <div>
           <p> {message[step]}</p>
           <div id="btn">
-            <button onClick={() => handleNextStep(true)}>{">"}</button>
+            <button onClick={() => handleNextStep(true)}>{">>>"}</button>
           </div>
         </div>
       </div>
