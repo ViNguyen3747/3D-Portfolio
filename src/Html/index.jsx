@@ -1,5 +1,6 @@
 import Guide from "./Guide";
-import Overlay from "./Overlay";
+import Logo from "./Logo";
 import Subheaders from "./Subheaders";
-
-export { Guide, Overlay, Subheaders };
+import Welcome from "./Welcome";
+import Carousel from "./Carousel";
+export { Guide, Logo, Subheaders, Welcome, Carousel };
