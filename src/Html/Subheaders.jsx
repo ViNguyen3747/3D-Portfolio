@@ -12,7 +12,7 @@ export default () => {
         style={{
           position: "absolute",
           left: "150vw",
-          top: "10vh",
+          top: "11vh",
         }}
       >
         Discover some interesting facts about me from the clickable items 😉

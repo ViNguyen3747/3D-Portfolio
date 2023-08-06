@@ -25,7 +25,12 @@ export default create((set) => ({
   cardMessage: "",
   isCardOpened: false,
   fade: false,
+  foundItems: [],
   setCard: (item) =>
     set(() => ({ cardMessage: CardLists[item], isCardOpened: true })),
   closeCard: () => set(() => ({ isCardOpened: false })),
+  setFoundItem: (item) =>
+    set(() => ({
+      foundItems: [...foundItems, item],
+    })),
 }));

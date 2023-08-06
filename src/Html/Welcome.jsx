@@ -26,10 +26,8 @@ export default () => {
       } else if (step === 4) {
         let carousel = document.getElementById("carousel");
         let backgroundSwitcher = document.getElementById("background");
-        let guide = document.getElementById("guide");
         carousel.style.pointerEvents = "visible";
         backgroundSwitcher.style.pointerEvents = "visible";
-        guide.style.pointerEvents = "visible";
         welcomeContainer.style.opacity = "0";
         welcomeContainer.style.visibility = "hidden";
       }

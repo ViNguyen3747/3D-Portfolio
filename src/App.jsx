@@ -41,7 +41,6 @@ function App() {
 
   return (
     <>
-      <Logo />
       <Welcome />
       <Carousel />
       <Guide />

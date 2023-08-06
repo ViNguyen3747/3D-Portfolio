@@ -38,18 +38,7 @@ $text-color: #53553c;
     box-shadow: $box-shadows-1 $box-shadows-2 0 0 $color-palette-2;
   }
 }
-@mixin guideResponsive($width, $font-size, $column-grid, $img-size) {
-  width: $width;
-  font-size: $font-size;
-  transform: translateX(-($width + 25px));
-  .item-list {
-    grid-template-columns: repeat(3, $column-grid);
-    img {
-      width: $img-size;
-      height: $img-size;
-    }
-  }
-}
+
 html,
 body,
 #root {
@@ -84,6 +73,7 @@ canvas {
 }
 ::-webkit-scrollbar {
   height: 5px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
@@ -188,47 +178,41 @@ canvas {
   animation: slide-out-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.navigation-guide {
-  @include cardStyle();
-  height: fit-content;
+#item-list {
+  position: absolute;
+  top: 2vh;
   left: 0;
-  transition: transform 0.35s ease-out;
   z-index: 1;
-  cursor: pointer;
-  padding: 1em;
-  margin-top: 1.5em;
-  border-radius: 0 5% 5% 0;
-  line-height: 2em;
+  display: flex;
+  flex-flow: row wrap;
+  width: fit-content;
+  max-width: 60vw;
+  height: fit-content;
+  background-color: #ffffff95;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 5px #ffffff95;
   border-left: 0;
-  .item-list {
-    display: grid;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(3, auto);
-  }
+  border-radius: 0 10px 10px 0;
   @media only screen and (max-width: 900px) {
-    @include guideResponsive(120px, 0.5em, 40px, 30px);
+    img {
+      width: 30px;
+      height: 30px;
+    }
   }
   @media only screen and (min-width: 900px) {
-    @include guideResponsive(190px, 0.8em, 60px, 50px);
+    img {
+      width: 40px;
+      height: 40px;
+    }
   }
   @media only screen and (min-width: 1200px) {
-    @include guideResponsive(220px, 1em, 70px, 60px);
+    img {
+      width: 50px;
+      height: 50px;
+    }
   }
 }
-.is-active {
-  transform: translateX(-3px);
-}
 
-#guide {
-  z-index: 1;
-  border-radius: 0 10px 10px 0;
-  top: 15vh;
-  width: 60px;
-  height: 400px;
-  position: absolute;
-  padding-top: 10px;
-  pointer-events: none;
-}
 .toggle-button {
   position: absolute;
   z-index: 2;
