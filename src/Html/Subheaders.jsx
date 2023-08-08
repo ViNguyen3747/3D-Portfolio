@@ -21,12 +21,12 @@ export default () => {
         className="subheaders"
         style={{
           position: "absolute",
-          left: "180vw",
-          top: "30vh",
+          left: "210vw",
+          top: "2vh",
         }}
       >
-        ✨Some of my works made with Threejs and Blender. Click on each for the
-        experience!
+        ✨Some of my works made with Threejs and Blender. Click on each project
+        for the experience!
       </div>
       <div
         className="subheaders"

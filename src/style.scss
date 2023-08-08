@@ -9,7 +9,7 @@ $text-color: #53553c;
 @mixin cardStyle() {
   position: absolute;
   overflow: hidden;
-  background-color: #ffffff95;
+  background-color: #ffffffb5;
   border: 2px dashed #ffffff;
   box-shadow: 0 0 0 5px #ffffff95;
   font-size: small;
@@ -55,11 +55,11 @@ body {
   letter-spacing: 2px;
   overscroll-behavior: none;
   font-family: "Chakra Petch", sans-serif;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     font-weight: 500;
     letter-spacing: 1px;
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     font-weight: 600;
   }
 }
@@ -92,11 +92,11 @@ canvas {
   z-index: 1;
   pointer-events: none;
   color: white;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     font-size: 0.5em;
     margin: 3px 7px;
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     font-size: 0.8em;
     margin: 7px 10px;
   }
@@ -120,11 +120,11 @@ canvas {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     font-family: "Chakra Petch", sans-serif;
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       letter-spacing: 1px;
       font-weight: 500;
     }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 768px) {
       letter-spacing: 2px;
       font-weight: 600;
     }
@@ -140,10 +140,10 @@ canvas {
   p {
     margin-top: 0;
   }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     @include cardResponsive(0.5em, 0px, 0.1px, 0.6px);
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     @include cardResponsive(0.7em, 1px, 0.3px, 1px);
   }
   @media only screen and (min-width: 1200px) {
@@ -151,15 +151,15 @@ canvas {
   }
 }
 .subheaders {
-  background-color: rgba(255, 255, 255, 0.645);
   width: max-content;
   font-weight: 500;
   padding: 0.5em 1em 0.5em 1em;
   @include cardStyle();
-  @media only screen and (max-width: 900px) {
+  background-color: rgba(255, 255, 255, 0.701);
+  @media only screen and (max-width: 768px) {
     @include subHeadersResponsive(120px, 0.5em, 13vh, 0.8rem);
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     @include subHeadersResponsive(150px, 0.7em, 15vh, 1.2rem);
   }
   @media only screen and (min-width: 1200px) {
@@ -177,38 +177,55 @@ canvas {
     both;
   animation: slide-out-left 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
+#toggle-btn {
+  position: absolute;
+  z-index: 2;
+  transform: translateX(60px);
+  top: 2vh;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffffffc5;
+}
 #item-list {
   position: absolute;
-  top: 2vh;
+  top: 1vh;
   left: 0;
   z-index: 1;
   display: flex;
   flex-flow: row wrap;
-  width: fit-content;
+  width: min-content;
   max-width: 60vw;
   height: fit-content;
-  background-color: #ffffff95;
-  border: 2px dashed #ffffff;
-  box-shadow: 0 0 0 5px #ffffff95;
+  background-color: #ffffffc5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-left: 0;
+  border: 2px solid white;
   border-radius: 0 10px 10px 0;
-  @media only screen and (max-width: 900px) {
-    img {
-      width: 30px;
-      height: 30px;
+  padding: 5px;
+  .item {
+    background-color: #cacaca55;
+    margin: 2px;
+    border-radius: 50%;
+    box-shadow: inset 5px 5px 10px #c1c1c177, inset -5px -5px 10px #ffffff7e;
+    @media only screen and (max-width: 768px) {
+      width: 35px;
+      height: 35px;
     }
-  }
-  @media only screen and (min-width: 900px) {
-    img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  @media only screen and (min-width: 1200px) {
-    img {
+    @media only screen and (min-width: 768px) {
       width: 50px;
       height: 50px;
+    }
+  }
+  img {
+    margin: 5px;
+    @media only screen and (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+    @media only screen and (min-width: 768px) {
+      width: 35px;
+      height: 35px;
     }
   }
 }
@@ -222,7 +239,7 @@ canvas {
   background-color: #ffffffea;
   border-radius: 50%;
   cursor: pointer;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     width: 25px;
     height: 25px;
     img {
@@ -230,7 +247,7 @@ canvas {
       height: 25px;
     }
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     width: 30px;
     height: 30px;
     img {
@@ -248,10 +265,10 @@ canvas {
   }
 }
 .toggle-active {
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     transform: translateX(145px);
   }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     transform: translateX(210px);
   }
   @media only screen and (min-width: 1200px) {
@@ -280,7 +297,7 @@ canvas {
     border-radius: 4px;
     margin-top: 10px;
     margin-left: -65px;
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       width: 15px;
       height: 15px;
     }
@@ -443,14 +460,14 @@ canvas {
   width: 100%;
   justify-content: space-around;
   margin-bottom: -1.3rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     margin-bottom: -2rem;
   }
   svg {
     width: 3rem;
     transition: 0.3s ease;
     -webkit-box-reflect: below -3.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       width: 2rem;
       -webkit-box-reflect: below -4.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
@@ -461,20 +478,20 @@ canvas {
   }
   #kitchen {
     -webkit-box-reflect: below -4.2rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       -webkit-box-reflect: below -4.9rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
   }
   #office {
     -webkit-box-reflect: below -3.8rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       -webkit-box-reflect: below -4.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
   }
   #home,
   #globe {
     -webkit-box-reflect: below -3.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 768px) {
       -webkit-box-reflect: below -4.4rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
     }
   }
@@ -490,14 +507,15 @@ canvas {
   justify-content: center;
   transition: 0.4s ease-in-out;
   > div {
-    background-color: #c3c3c3b3;
+    background-color: #c3c3c37c;
     border: 2px dashed #ffffff;
-    box-shadow: 0 0 0 5px #c3c3c3b3;
+    box-shadow: 0 0 0 5px #c3c3c37c;
+    backdrop-filter: blur(10px);
     border-radius: 2em;
     color: rgb(255, 255, 255);
     width: 200px;
     padding: 10px;
-    height: 40vh;
+    height: 30vh;
     display: flex;
     flex-flow: column;
   }
@@ -505,7 +523,10 @@ canvas {
     height: 100%;
     font-size: 1rem;
     line-height: 1.5rem;
-    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   #btn {
     width: 100%;
@@ -551,7 +572,7 @@ canvas {
   z-index: 4;
   width: 0;
   height: 0;
-  top: 15.5vh;
+  top: 2vh;
   position: absolute;
   border-radius: 5px;
   transition: 0.4s ease;

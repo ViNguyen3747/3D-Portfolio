@@ -2,11 +2,15 @@ import React from "react";
 import { useGLTF, Center, Float } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 import ClickableItem from "./Helper/ClickableItem";
+import useCard from "../Stores/useCard";
 
 export default (props) => {
   const { nodes } = useGLTF("./Models/workspace.glb");
   const { width: w } = useThree((state) => state.viewport);
+  const setResume = useCard((state) => state.setResume);
+
   const handleResume = () => {
+    setResume();
     window.open("/resume.pdf");
   };
 
@@ -27,11 +31,11 @@ export default (props) => {
             }}
           />
           <ClickableItem isPrimitive label="computer" object={nodes.computer} />
-          <ClickableItem isPrimitive label="books" object={nodes.books} />
+          <ClickableItem isPrimitive label="book" object={nodes.books} />
           <ClickableItem label="coffee" isPrimitive object={nodes.coffee} />
           <ClickableItem
             isPrimitive
-            label="headphones"
+            label="headphone"
             object={nodes.headphones}
           />
           <ClickableItem

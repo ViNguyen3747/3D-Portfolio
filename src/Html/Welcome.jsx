@@ -9,9 +9,8 @@ export default () => {
     if (next) {
       setStep((prev) => prev + 1);
       if (step === 0) {
-        dimContainer.style.top = "15.5vh";
-        dimContainer.style.height = "60px";
-        dimContainer.style.width = "60px";
+        dimContainer.style.height = "62px";
+        dimContainer.style.width = "62px";
       }
       if (step === 1) {
         dimContainer.style.top = "91vh";
@@ -35,8 +34,8 @@ export default () => {
   };
 
   const message = [
-    "Before you get started, let me show you a quick guide",
-    "Throughout the experience, you could find some fun facts about me by clicking on hidden objects. This helper lists all items if you miss any",
+    "Before you get started, let me give you a quick go-through",
+    "The theme is based on Hidden object games. You can find some fun facts about me by clicking on these hidden items.",
     "You can either scroll right or use this carousel to go to each section of the web page",
     `I love colors! I added this background-color switcher just simply because I couldn't decide which one to use ^^`,
     "That's it! Hope you enjoy the experience!!!",

@@ -12,7 +12,7 @@ export default (props) => {
       <Center position={[w * 3.2, -1, 0]} scale={[w / 4, w / 4, w / 4]}>
         <group {...props} dispose={null}>
           <primitive object={nodes.base} />
-          <ClickableItem isPrimitive label="omlette" object={nodes.omlette} />
+          <ClickableItem isPrimitive label="omelette" object={nodes.omlette} />
           <ClickableItem isPrimitive label="rolling" object={nodes.rolling} />
           <ClickableItem isPrimitive label="loaf" object={nodes.loaf} />
           <ClickableItem isPrimitive label="piping" object={nodes.piping} />
