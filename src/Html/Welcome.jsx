@@ -13,12 +13,14 @@ export default () => {
         dimContainer.style.width = "62px";
       }
       if (step === 1) {
-        dimContainer.style.top = "91vh";
+        dimContainer.style.top = "92vh";
+        dimContainer.style.height = "70px";
         dimContainer.style.width = "100vw";
       } else if (step === 2) {
         dimContainer.style.right = "0";
         dimContainer.style.top = "0";
         dimContainer.style.width = "130px";
+        dimContainer.style.height = "60px";
         dimContainer.style.marginRight = "5.5px";
       } else if (step === 3) {
         dimContainer.style.width = "0";
