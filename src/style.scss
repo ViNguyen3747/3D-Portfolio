@@ -81,7 +81,7 @@ canvas {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-palette-5;
+  background-color: white;
   border-radius: 10px;
 }
 
@@ -166,6 +166,22 @@ canvas {
     @include subHeadersResponsive(300px, 1em, 0, 1.5rem);
   }
 }
+.subheaders-project {
+  width: max-content;
+  font-weight: 500;
+  padding: 0.5em 1em 0.5em 1em;
+  @include cardStyle();
+  background-color: rgba(255, 255, 255, 0.701);
+  @media only screen and (max-width: 768px) {
+    @include subHeadersResponsive(200px, 0.5em, 13vh, 0.8rem);
+  }
+  @media only screen and (min-width: 768px) {
+    @include subHeadersResponsive(300px, 0.7em, 15vh, 1.2rem);
+  }
+  @media only screen and (min-width: 1200px) {
+    @include subHeadersResponsive(400px, 1em, 0, 1.5rem);
+  }
+}
 
 .fade-in {
   -webkit-animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -189,6 +205,7 @@ canvas {
 }
 #item-list {
   position: absolute;
+  pointer-events: none;
   top: 1vh;
   left: 0;
   z-index: 1;
@@ -197,6 +214,8 @@ canvas {
   width: min-content;
   max-width: 60vw;
   height: fit-content;
+  max-height: 90vh;
+  overflow-y: scroll;
   background-color: #ffffffc5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   border-left: 0;
@@ -497,7 +516,48 @@ canvas {
   }
   pointer-events: none;
 }
-
+#leaf {
+  z-index: 3;
+  position: absolute;
+  margin-top: -30px;
+  transform: rotate(-20deg);
+  width: 40px;
+  height: 40px;
+}
+#flower-1 {
+  z-index: 3;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: -180px;
+  width: 35px;
+  height: 35px;
+}
+#flower-2 {
+  z-index: 3;
+  position: absolute;
+  margin-right: -200px;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+}
+#flower-3 {
+  z-index: 3;
+  position: absolute;
+  margin-right: -230px;
+  margin-top: 30px;
+  width: 45px;
+  height: 45px;
+  transform: rotate(30deg);
+}
+#flower-4 {
+  z-index: 3;
+  position: absolute;
+  margin-left: -230px;
+  margin-top: 30px;
+  width: 35px;
+  height: 35px;
+  transform: rotate(-20deg);
+}
 #welcome {
   z-index: 4;
   position: absolute;
@@ -505,17 +565,18 @@ canvas {
   width: 100%;
   display: flex;
   justify-content: center;
-  transition: 0.4s ease-in-out;
+  transition: 0.7s ease-in-out;
+  animation: slide-in 2s ease-out;
+  height: fit-content;
+  min-height: 35vh;
   > div {
-    background-color: #c3c3c37c;
+    background-color: #c3c3c3b3;
     border: 2px dashed #ffffff;
-    box-shadow: 0 0 0 5px #c3c3c37c;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 0 0 5px #c3c3c3b3;
     border-radius: 2em;
     color: rgb(255, 255, 255);
     width: 200px;
     padding: 10px;
-    height: 30vh;
     display: flex;
     flex-flow: column;
   }
@@ -551,6 +612,17 @@ canvas {
         animation: opacity-animation 1.3s infinite 0.6s;
       }
     }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 30vh;
   }
 }
 @keyframes opacity-animation {
