@@ -480,11 +480,12 @@ export default () => {
         dimContainer.style.marginTop = "0";
         dimContainer.style.width = "100vw";
       } else if (step === 2) {
-        dimContainer.style.right = "0";
-        dimContainer.style.top = "0";
+        dimContainer.style.top = 0;
         dimContainer.style.width = "130px";
         dimContainer.style.height = "60px";
         dimContainer.style.marginRight = "5.5px";
+        dimContainer.style.left = "unset";
+        dimContainer.style.right = 0;
       } else if (step === 3) {
         dimContainer.style.width = "0";
       } else if (step === 4) {
@@ -496,13 +497,36 @@ export default () => {
         welcomeContainer.style.visibility = "hidden";
         welcomeContainer.style.top = 0;
       }
+    } else {
+      setStep((prev) => prev - 1);
+      if (step === 1) {
+        dimContainer.style.height = "0";
+        dimContainer.style.width = "0";
+      } else if (step === 2) {
+        dimContainer.style.height = "62px";
+        dimContainer.style.width = "62px";
+        dimContainer.style.top = "2vh";
+        dimContainer.style.left = "0";
+      } else if (step === 3) {
+        dimContainer.style.top = "92vh";
+        dimContainer.style.height = "100px";
+        dimContainer.style.marginTop = "0";
+        dimContainer.style.width = "100vw";
+        dimContainer.style.right = "0";
+      } else if (step === 4) {
+        dimContainer.style.top = 0;
+        dimContainer.style.width = "130px";
+        dimContainer.style.height = "60px";
+        dimContainer.style.marginRight = "5.5px";
+        dimContainer.style.right = 0;
+      }
     }
   };
 
   const message = [
-    "Before you get started, let me give you a quick go-through",
+    "Before you get started, let me give you a quick go-through.",
     "Hidden objects are scattered in this portfolio. Find these items to discover interesting facts.",
-    "You can either scroll down or use this carousel to go to each section of the web page",
+    "You can either scroll down or use this carousel to go to each section of the web page.",
     `I love colors! I added this background-color switcher just simply because I couldn't decide which one to use ^^`,
     "That's it! Hope you enjoy the experience!!!",
     "That's it! Hope you enjoy the experience!!!",
@@ -521,6 +545,14 @@ export default () => {
         <div>
           <p> {message[step]}</p>
           <div id="btn">
+            <button
+              onClick={() => handleNextStep(false)}
+              style={{ opacity: step > 0 ? 1 : 0 }}
+            >
+              <div>{"<"}</div>
+              <div>{"<"}</div>
+              <div>{"<"}</div>
+            </button>
             <button onClick={() => handleNextStep(true)}>
               <div>{">"}</div>
               <div>{">"}</div>
