@@ -69,8 +69,7 @@ export default () => {
             <div className="description">
               <p>NightCoder</p>
               <p className="description-subtitle">
-                Nighttime workspace of a software developer, illuminated by the
-                soft glow of monitors and code
+                Nighttime workspace of a software developer
               </p>
             </div>
           </a>
@@ -139,8 +138,7 @@ export default () => {
             <div className="description">
               <p>Sunset</p>
               <p className="description-subtitle">
-                A 2.5D animation capturing the essence of sunset with a palette
-                of orange and dark blue
+                A 2.5D animation capturing the essence of sunset
               </p>
             </div>
           </a>
@@ -173,8 +171,8 @@ export default () => {
             <div className="description">
               <p>Cosmic Pages</p>
               <p className="description-subtitle">
-                a mesmerizing 2.5D animation that unveils a universe within the
-                pages of a flipping book
+                a 2.5D animation unveiling a universe within the pages of a
+                flipping book
               </p>
             </div>
           </a>
@@ -206,14 +204,32 @@ export default () => {
           <p className="day-num">20.</p>
         </div>
         <div id="empty7">
-          <p className="day-num">22.</p>
+          <div id="palette-container">
+            <div id="palette-inner">
+              <div class="color">
+                <span>ccd5ae</span>
+              </div>
+              <div class="color">
+                <span>e9edc9</span>
+              </div>
+              <div class="color">
+                <span>fefae0</span>
+              </div>
+              <div class="color">
+                <span>ffdec0</span>
+              </div>
+              <div class="color">
+                <span>ffc694</span>
+              </div>
+            </div>
+            <div id="palette-footer">My fav palette</div>
+          </div>
         </div>
         <div id="empty8">
           <p className="day-num">26.</p>
           <div className="clock">
             <span className="hour"></span>
             <span className="min"></span>
-            <span className="circel"></span>
           </div>
         </div>
       </div>

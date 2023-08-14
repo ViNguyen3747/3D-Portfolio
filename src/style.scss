@@ -682,8 +682,8 @@ canvas {
   grid-template-areas:
     "project-board project-board project-board empty1 window empty2 book book"
     "empty3 transition empty4 weather weather coffee-shop empty5 book-lover"
-    "car car office empty6 window-view empty7 sweet-city sweet-city"
-    "workaholic empty8 sunset mars book-flipping book-flipping strawberry to-be-continued";
+    "car car office empty6 window-view book-flipping sweet-city sweet-city"
+    "workaholic empty8 sunset mars empty7 empty7 strawberry to-be-continued";
   & > div {
     border: 1px solid rgb(255, 255, 255);
   }
@@ -749,6 +749,7 @@ a {
   width: 94%;
   height: 100%;
   transform: translateY(100%);
+  color: #6c6b6b;
   & > p:nth-child(1) {
     font-family: "Bruno Ace", cursive;
     font-weight: 400;
@@ -933,15 +934,6 @@ a {
   animation: tick-tock 60s steps(60, end) infinite;
 }
 
-.clock .circel {
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  position: absolute;
-  top: 2.1vw;
-  left: 2.1vw;
-}
-
 @keyframes tick-tock {
   0% {
     transform: rotate(0deg);
@@ -949,5 +941,73 @@ a {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+#palette-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #6c6b6b;
+  justify-self: center;
+  align-self: center;
+  background: #ffffff;
+}
+
+#palette-inner {
+  display: flex;
+  height: 80%;
+  width: 100%;
+}
+#palette-footer {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 0.8rem;
+  align-items: center;
+  font-family: "Bruno Ace", cursive;
+}
+
+.color {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: flex 0.1s linear;
+  span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  &:nth-child(1) {
+    background: #ccd5ae;
+  }
+
+  &:nth-child(2) {
+    background: #e9edc9;
+  }
+
+  &:nth-child(3) {
+    background: #fefae0;
+  }
+
+  &:nth-child(4) {
+    background: #ffdec0;
+  }
+
+  &:nth-child(5) {
+    background: #ffc694;
+  }
+  &:hover {
+    flex: 2;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    span {
+      opacity: 1;
+    }
   }
 }
