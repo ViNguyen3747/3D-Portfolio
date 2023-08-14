@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Logo, Guide, Subheaders, Carousel, Welcome } from "./Html";
+import { ProjectBoard, Guide, Subheaders, Carousel, Welcome } from "./Html";
 import { ScrollControls, Scroll, Loader } from "@react-three/drei";
 import {
   Avatar,
@@ -8,7 +8,6 @@ import {
   SocialMedia,
   Header,
   Workspace,
-  Gallery,
   CarouselDestinations,
 } from "./Models";
 import Card from "./Models/Helper/Card";
@@ -64,13 +63,14 @@ function App() {
           position={[10, 10, 20]}
         />
         <ScrollControls horizontal damping={0.5} pages={5}>
+          <Scroll html>
+            <Subheaders />
+            <ProjectBoard />
+          </Scroll>
           <Scroll>
             <Suspense fallback={null}>
               <Header />
             </Suspense>
-          </Scroll>
-          <Scroll html>
-            <Subheaders />
           </Scroll>
           <Scroll>
             <Suspense fallback={null}>
@@ -85,11 +85,6 @@ function App() {
           <Scroll>
             <Suspense fallback={null}>
               <Baking />
-            </Suspense>
-          </Scroll>
-          <Scroll>
-            <Suspense fallback={null}>
-              <Gallery />
             </Suspense>
           </Scroll>
           <Scroll>

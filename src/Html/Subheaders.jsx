@@ -21,7 +21,7 @@ export default () => {
         className="subheaders-project"
         style={{
           position: "absolute",
-          left: "210vw",
+          left: "180vw",
           top: "2vh",
         }}
       >

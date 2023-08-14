@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 $color-palette-1: #9fa26e;
 $color-palette-2: #dad7b4;
 $color-palette-3: #c8a086;
@@ -171,6 +172,7 @@ canvas {
   font-weight: 500;
   padding: 0.5em 1em 0.5em 1em;
   @include cardStyle();
+  z-index: 2;
   background-color: rgba(255, 255, 255, 0.701);
   @media only screen and (max-width: 768px) {
     @include subHeadersResponsive(200px, 0.5em, 13vh, 0.8rem);
@@ -662,4 +664,290 @@ canvas {
   position: absolute;
   border-radius: 5px;
   transition: 0.4s ease;
+}
+
+#project-board-container {
+  position: absolute;
+  z-index: 1;
+  left: 210vw;
+  height: 100vh;
+  display: flex;
+}
+#project-board-inner {
+  margin: auto;
+  display: grid;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  grid-template-columns: repeat(8, 11vw);
+  grid-template-rows: repeat(4, 11vw);
+  grid-template-areas:
+    "project-board project-board project-board empty1 window empty2 book book"
+    "empty3 transition empty4 weather weather coffee-shop empty5 book-lover"
+    "car car office empty6 window-view empty7 sweet-city sweet-city"
+    "workaholic empty8 sunset mars book-flipping book-flipping strawberry to-be-continued";
+  & > div {
+    border: 1px solid rgb(255, 255, 255);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+#project-board {
+  grid-area: project-board;
+  background-color: rgba(245, 238, 225, 0.3);
+  display: flex;
+  flex-direction: column;
+  font-size: 3vw;
+  color: #ffffff;
+  font-family: "Bruno Ace", cursive;
+  line-height: 0;
+  padding: 10px 10px;
+  span {
+    align-self: flex-end;
+    margin-right: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 2vw;
+  }
+}
+
+#to-be-continued {
+  grid-area: to-be-continued;
+  background-color: rgba(245, 238, 225, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  color: #ffffff;
+  font-family: "Bruno Ace", cursive;
+  line-height: 0;
+}
+.description-subtitle {
+  font-size: smaller;
+  text-align: center;
+  font-weight: 400;
+  @media only screen and (max-width: 768px) {
+    font-size: 0.2rem;
+  }
+}
+.description {
+  position: absolute;
+  z-index: 3;
+  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 4px;
+  height: 70%;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffffdf;
+  border-radius: 16px 16px 0 0;
+  width: 94%;
+  height: 100%;
+  transform: translateY(100%);
+  & > p:nth-child(1) {
+    font-family: "Bruno Ace", cursive;
+    font-weight: 400;
+    font-size: 0.8rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 0.3rem;
+      line-height: 0;
+    }
+  }
+}
+.proj-showcase {
+  position: relative;
+  overflow: hidden;
+  & > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover > a > div {
+    transform: translateY(10%);
+  }
+}
+#strawberry {
+  grid-area: strawberry;
+}
+#book {
+  grid-area: book;
+}
+#mars {
+  grid-area: mars;
+}
+#weather {
+  grid-area: weather;
+}
+#car {
+  grid-area: car;
+}
+#office {
+  grid-area: office;
+}
+#sweet-city {
+  grid-area: sweet-city;
+}
+#workaholic {
+  grid-area: workaholic;
+}
+#transition {
+  grid-area: transition;
+}
+#window-view {
+  grid-area: window-view;
+}
+#window {
+  grid-area: window;
+}
+#sunset {
+  grid-area: sunset;
+}
+
+#coffee-shop {
+  grid-area: coffee-shop;
+}
+#book-lover {
+  grid-area: book-lover;
+}
+#book-flipping {
+  grid-area: book-flipping;
+}
+#empty1 {
+  grid-area: empty1;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty2 {
+  grid-area: empty2;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty3 {
+  grid-area: empty3;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty4 {
+  grid-area: empty4;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty5 {
+  grid-area: empty5;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty6 {
+  grid-area: empty6;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty7 {
+  grid-area: empty7;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty8 {
+  grid-area: empty8;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+
+.day-num {
+  text-align: end;
+  color: white;
+  font-family: "Bruno Ace", cursive;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 0;
+  @media only screen and (max-width: 768px) {
+    font-size: 0.3rem;
+  }
+}
+
+#hello-world {
+  text-align: center;
+  color: white;
+  font-family: "Bruno Ace", cursive;
+  font-size: 0.8rem;
+  font-weight: 350;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+
+  span {
+    font-size: 1.5rem;
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.clock {
+  width: 5vw;
+  height: 5vw;
+  border: 4px solid white;
+  position: relative;
+  left: 2.5vw;
+}
+
+.clock span {
+  display: block;
+  background: white;
+}
+
+.clock .hour,
+.clock .min {
+  width: 3px;
+  height: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 2.3vw;
+  left: 2.33vw;
+  animation: tick-tock 3600s steps(60, end) infinite;
+  transform-origin: top center;
+}
+
+.clock .min {
+  height: 30px;
+  animation: tick-tock 60s steps(60, end) infinite;
+}
+
+.clock .circel {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  position: absolute;
+  top: 2.1vw;
+  left: 2.1vw;
+}
+
+@keyframes tick-tock {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
