@@ -676,13 +676,13 @@ canvas {
 #project-board-inner {
   margin: auto;
   display: grid;
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   grid-template-columns: repeat(8, 11vw);
   grid-template-rows: repeat(4, 11vw);
   grid-template-areas:
     "project-board project-board project-board empty1 window empty2 book book"
     "empty3 transition empty4 weather weather coffee-shop empty5 book-lover"
-    "car car office empty6 window-view book-flipping sweet-city sweet-city"
+    "car car office empty6 window-view sweet-city sweet-city book-flipping"
     "workaholic empty8 sunset mars empty7 empty7 strawberry to-be-continued";
   & > div {
     border: 1px solid rgb(255, 255, 255);
@@ -702,7 +702,7 @@ a {
   background-color: rgba(245, 238, 225, 0.3);
   display: flex;
   flex-direction: column;
-  font-size: 3vw;
+  font-size: 2.7vw;
   color: #ffffff;
   font-family: "Bruno Ace", cursive;
   line-height: 0;
@@ -729,12 +729,9 @@ a {
   line-height: 0;
 }
 .description-subtitle {
-  font-size: smaller;
+  font-size: 0.8vw;
   text-align: center;
   font-weight: 400;
-  @media only screen and (max-width: 768px) {
-    font-size: 0.2rem;
-  }
 }
 .description {
   position: absolute;
@@ -753,9 +750,8 @@ a {
   & > p:nth-child(1) {
     font-family: "Bruno Ace", cursive;
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     @media only screen and (max-width: 768px) {
-      font-size: 0.3rem;
       line-height: 0;
     }
   }
@@ -842,6 +838,16 @@ a {
 #empty5 {
   grid-area: empty5;
   background-color: rgba(245, 238, 225, 0.3);
+  div {
+    width: 100%;
+    display: flex;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 5vw;
+    }
+  }
 }
 #empty6 {
   grid-area: empty6;
@@ -861,18 +867,15 @@ a {
   color: white;
   font-family: "Bruno Ace", cursive;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.2vw;
   line-height: 0;
-  @media only screen and (max-width: 768px) {
-    font-size: 0.3rem;
-  }
 }
 
 #hello-world {
   text-align: center;
   color: white;
   font-family: "Bruno Ace", cursive;
-  font-size: 0.8rem;
+  font-size: 0.8vw;
   font-weight: 350;
   height: 50%;
   width: 100%;
@@ -884,7 +887,7 @@ a {
   margin: 0 auto;
 
   span {
-    font-size: 1.5rem;
+    font-size: 1vw;
     -webkit-animation-name: opacity;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -904,34 +907,30 @@ a {
   }
 }
 
-.clock {
-  width: 5vw;
-  height: 5vw;
-  border: 4px solid white;
+#clock {
+  width: 6vw;
+  height: 6vw;
+  border: 0.3vw solid white;
   position: relative;
   left: 2.5vw;
-}
-
-.clock span {
-  display: block;
-  background: white;
-}
-
-.clock .hour,
-.clock .min {
-  width: 3px;
-  height: 20px;
-  border-radius: 50px;
-  position: absolute;
-  top: 2.3vw;
-  left: 2.33vw;
-  animation: tick-tock 3600s steps(60, end) infinite;
-  transform-origin: top center;
-}
-
-.clock .min {
-  height: 30px;
-  animation: tick-tock 60s steps(60, end) infinite;
+  #min,
+  #hour {
+    display: block;
+    background: white;
+    width: 0.2vw;
+    height: 2vw;
+    border-radius: 50px;
+    position: absolute;
+    top: 1.2vw;
+    left: 2.9vw;
+    animation: tick-tock 3600s steps(60, end) infinite;
+    transform-origin: bottom center;
+  }
+  #min {
+    height: 2.8vw;
+    top: 0.4vw;
+    animation: tick-tock 60s steps(60, end) infinite;
+  }
 }
 
 @keyframes tick-tock {
@@ -952,62 +951,74 @@ a {
   justify-self: center;
   align-self: center;
   background: #ffffff;
-}
-
-#palette-inner {
-  display: flex;
-  height: 80%;
-  width: 100%;
-}
-#palette-footer {
-  display: flex;
-  height: 20%;
-  width: 100%;
-  justify-content: center;
-  font-weight: 300;
-  font-size: 0.8rem;
-  align-items: center;
-  font-family: "Bruno Ace", cursive;
-}
-
-.color {
-  height: 100%;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: flex 0.1s linear;
-  span {
-    opacity: 0;
-    transition: opacity 0.1s linear;
+  font-size: 0.8vw;
+  #palette-inner {
+    display: flex;
+    height: 80%;
+    width: 100%;
   }
-  &:nth-child(1) {
-    background: #ccd5ae;
+  #palette-footer {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    font-weight: 300;
+    align-items: center;
+    font-family: "Bruno Ace", cursive;
   }
 
-  &:nth-child(2) {
-    background: #e9edc9;
-  }
-
-  &:nth-child(3) {
-    background: #fefae0;
-  }
-
-  &:nth-child(4) {
-    background: #ffdec0;
-  }
-
-  &:nth-child(5) {
-    background: #ffc694;
-  }
-  &:hover {
-    flex: 2;
-    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  .color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: flex 0.1s linear;
     span {
-      opacity: 1;
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+    &:nth-child(1) {
+      background: #ccd5ae;
+    }
+
+    &:nth-child(2) {
+      background: #e9edc9;
+    }
+
+    &:nth-child(3) {
+      background: #fefae0;
+    }
+
+    &:nth-child(4) {
+      background: #ffdec0;
+    }
+
+    &:nth-child(5) {
+      background: #ffc694;
+    }
+    &:hover {
+      flex: 2;
+      // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      span {
+        opacity: 1;
+      }
     }
   }
+}
+
+#console-log {
+  color: white;
+  font-family: "Bruno Ace", cursive;
+  font-size: 0.7vw;
+  font-weight: 350;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  width: 100%;
+  align-items: center;
 }
