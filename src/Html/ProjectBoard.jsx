@@ -214,19 +214,19 @@ export default () => {
         <div id="empty7">
           <div id="palette-container">
             <div id="palette-inner">
-              <div class="color">
+              <div className="color">
                 <span>ccd5ae</span>
               </div>
-              <div class="color">
+              <div className="color">
                 <span>e9edc9</span>
               </div>
-              <div class="color">
+              <div className="color">
                 <span>fefae0</span>
               </div>
-              <div class="color">
+              <div className="color">
                 <span>ffdec0</span>
               </div>
-              <div class="color">
+              <div className="color">
                 <span>ffc694</span>
               </div>
             </div>
@@ -285,19 +285,19 @@ const Sunflower = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M51.5,86c0,0,1.6-15.3,25.3-19.2C74.9,78.5,61.7,85.6,51.5,86z"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M48.2,86c0,0-1.6-15.3-25.1-19.2C25.1,78.5,38.1,85.6,48.2,86z"
     ></path>
     <ellipse
@@ -319,10 +319,10 @@ const Sunflower = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M70.4,42.1c3.4-0.3,6.5-1.8,8.6-4.1c-2-2.2-5-3.7-8.3-4.1c3-1.6,5.1-4.1,6.1-6.9c-2.8-1.3-6.2-1.6-9.5-0.5	c2.2-2.6,3.3-5.9,3.2-9c-3-0.1-6.1,0.9-8.8,3c1-3.2,0.7-6.5-0.6-9.2c-2.9,1-5.5,3.3-7.1,6.3c-0.3-3.4-1.8-6.5-4.1-8.6	c-2.2,2-3.7,5-4.1,8.3c-1.6-3-4.1-5.1-6.9-6.1c-1.3,2.8-1.6,6.2-0.5,9.5c-2.6-2.2-5.9-3.3-9-3.2c-0.1,3,0.9,6.1,3,8.8	c-3.2-1-6.5-0.7-9.2,0.6c1,2.9,3.3,5.5,6.3,7.1c-3.4,0.3-6.5,1.8-8.6,4.1c2,2.2,5,3.7,8.3,4.1c-3,1.6-5.1,4.1-6.1,6.9	c2.8,1.3,6.2,1.6,9.5,0.5c-2.2,2.6-3.3,5.9-3.2,9c3,0.1,6.1-0.9,8.8-3c-1,3.2-0.7,6.5,0.6,9.2c2.9-1,5.5-3.3,7.1-6.3	c0.3,3.4,1.8,6.5,4.1,8.6c2.2-2,3.7-5,4.1-8.3c1.6,3,4.1,5.1,6.9,6.1c1.3-2.8,1.6-6.2,0.5-9.5c2.6,2.2,5.9,3.3,9,3.2	c0.1-3-0.9-6.1-3-8.8c3.2,1,6.5,0.7,9.2-0.6C75.7,46.3,73.5,43.7,70.4,42.1z"
     ></path>
     <line
@@ -332,10 +332,10 @@ const Sunflower = () => (
       y2="88"
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
     ></line>
     <ellipse
       cx="65.3"

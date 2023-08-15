@@ -75,10 +75,10 @@ const Flower1 = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M78.4,39.5c0.7-1.1,1.2-2.3,1.5-3.4c2-6.6-1.7-12.9-8.1-17.5c-6.4-4.6-13.5-6.2-19.2-2.3	c-0.9,0.7-1.9,1.5-2.7,2.5c-6-6.9-14.4-5.7-21.9-0.2c-6.4,4.6-10.1,10.9-8.1,17.5c0.3,1.1,0.8,2.3,1.5,3.4c-8.4,3.6-9.8,12-7,20.7	c2.8,8.8,8.9,14.7,17.9,12.7C33.2,82,40.8,85.9,50,85.9c9.2,0,16.8-4,17.6-13.1c8.9,2.1,15-3.9,17.9-12.7	C88.3,51.4,86.8,43,78.4,39.5z"
     ></path>
     <path
@@ -115,57 +115,57 @@ const Flower2 = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M80.2,47.8c-0.4-0.3-0.9-0.5-1.4-0.7c0.8-0.4,1.5-0.8,2.3-1.2c5.2-3,5.9-5.9,4.9-7.5c-2-3.5-6.2-0.7-9.3-6.2	c-1.8-3-0.8-5.3-2.3-7.9c-1.7-2.9-5.2-5.1-11.3-1.6c-0.4,0.3-0.9,0.5-1.3,0.8C62,22.8,62,21.9,62,21c0-6-2.1-8-4-8c-4,0-3.7,5-10,5	c-3.5,0-5-2-8-2c-3.4,0-7,2-7,9c0,0.5,0,1,0.1,1.5c-0.7-0.5-1.4-1-2.2-1.4c-5.2-3-8-2.1-8.9-0.5c-2,3.5,2.5,5.7-0.7,11.2	c-1.8,3-4.2,3.3-5.7,5.9c-1.7,2.9-1.8,7.1,4.3,10.6c0.4,0.3,0.9,0.5,1.4,0.7c-0.8,0.4-1.5,0.8-2.3,1.2c-5.2,3-5.9,5.9-4.9,7.5	c2,3.5,6.2,0.7,9.3,6.2c1.8,3,0.8,5.3,2.3,7.9c1.7,2.9,5.2,5.1,11.3,1.6c0.4-0.3,0.9-0.5,1.3-0.8C38,77.2,38,78.1,38,79	c0,6,2.1,8,4,8c4,0,3.7-5,10-5c3.5,0,5,2,8,2c3.4,0,7-2,7-9c0-0.5,0-1-0.1-1.5c0.7,0.5,1.4,1,2.2,1.4c5.2,3,8,2.1,8.9,0.5	c2-3.5-2.5-5.7,0.7-11.2c1.8-3,4.2-3.3,5.7-5.9C86.1,55.4,86.2,51.3,80.2,47.8z"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M30.9,25.1c6.2,4.5,10.4,9.2,13,14.1"
       opacity=".35"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M62,22.1c-0.7,7.6-2.6,13.6-5.5,18.4"
       opacity=".35"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M80.3,46.5c-7.1,2.8-13.4,3.8-18.9,3.4"
       opacity=".35"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M68.9,75c-6.1-4.6-10.2-9.4-12.7-14.4"
       opacity=".35"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M38,78.2c0.5-7.6,2.1-13.7,4.9-18.5"
       opacity=".35"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M19.5,53.6c7.1-2.8,13.3-3.9,18.9-3.5"
       opacity=".35"
     ></path>
@@ -214,19 +214,19 @@ const Flower3 = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M51.5,86c0,0,1.6-15.3,25.3-19.2C74.9,78.5,61.7,85.6,51.5,86z"
     ></path>
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M48.2,86c0,0-1.6-15.3-25.1-19.2C25.1,78.5,38.1,85.6,48.2,86z"
     ></path>
     <ellipse
@@ -248,10 +248,10 @@ const Flower3 = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M70.4,42.1c3.4-0.3,6.5-1.8,8.6-4.1c-2-2.2-5-3.7-8.3-4.1c3-1.6,5.1-4.1,6.1-6.9c-2.8-1.3-6.2-1.6-9.5-0.5	c2.2-2.6,3.3-5.9,3.2-9c-3-0.1-6.1,0.9-8.8,3c1-3.2,0.7-6.5-0.6-9.2c-2.9,1-5.5,3.3-7.1,6.3c-0.3-3.4-1.8-6.5-4.1-8.6	c-2.2,2-3.7,5-4.1,8.3c-1.6-3-4.1-5.1-6.9-6.1c-1.3,2.8-1.6,6.2-0.5,9.5c-2.6-2.2-5.9-3.3-9-3.2c-0.1,3,0.9,6.1,3,8.8	c-3.2-1-6.5-0.7-9.2,0.6c1,2.9,3.3,5.5,6.3,7.1c-3.4,0.3-6.5,1.8-8.6,4.1c2,2.2,5,3.7,8.3,4.1c-3,1.6-5.1,4.1-6.1,6.9	c2.8,1.3,6.2,1.6,9.5,0.5c-2.2,2.6-3.3,5.9-3.2,9c3,0.1,6.1-0.9,8.8-3c-1,3.2-0.7,6.5,0.6,9.2c2.9-1,5.5-3.3,7.1-6.3	c0.3,3.4,1.8,6.5,4.1,8.6c2.2-2,3.7-5,4.1-8.3c1.6,3,4.1,5.1,6.9,6.1c1.3-2.8,1.6-6.2,0.5-9.5c2.6,2.2,5.9,3.3,9,3.2	c0.1-3-0.9-6.1-3-8.8c3.2,1,6.5,0.7,9.2-0.6C75.7,46.3,73.5,43.7,70.4,42.1z"
     ></path>
     <line
@@ -261,10 +261,10 @@ const Flower3 = () => (
       y2="88"
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
     ></line>
     <ellipse
       cx="65.3"
@@ -453,10 +453,10 @@ const Flower4 = () => (
     <path
       fill="none"
       stroke="#40396e"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-miterlimit="10"
-      stroke-width="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+      strokeWidth="3"
       d="M84.574,52.647c-15.719,2.057-25.075,9.285-30.627,16.628V55.664c12.464-1.637,21.711-10.897,21.711-21.454	c0-11.053-9.868-17.763-9.868-17.763s-0.329,1.862-1.19,4.646c-2.398-3.124-4.731-5.041-4.731-5.041s-1.565,1.286-3.449,3.465	C53.303,15.199,50,12.5,50,12.5s-3.303,2.699-6.42,7.018c-1.883-2.179-3.449-3.465-3.449-3.465s-2.334,1.917-4.731,5.041	c-0.86-2.784-1.19-4.646-1.19-4.646s-9.868,6.711-9.868,17.763c0,10.557,9.247,19.816,21.711,21.454v13.611	c-5.552-7.344-14.908-14.571-30.627-16.628c0,33.372,25.145,34.79,30.627,34.85V87.5h7.895v-0.003	C59.429,87.437,84.574,86.019,84.574,52.647z"
     ></path>
   </svg>
