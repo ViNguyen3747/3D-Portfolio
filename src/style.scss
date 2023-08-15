@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 $color-palette-1: #9fa26e;
 $color-palette-2: #dad7b4;
 $color-palette-3: #c8a086;
@@ -703,8 +703,9 @@ a {
   display: flex;
   flex-direction: column;
   font-size: 2.7vw;
+  letter-spacing: 0.3vw;
   color: #ffffff;
-  font-family: "Bruno Ace", cursive;
+  font-family: "Orbitron", sans-serif;
   line-height: 0;
   padding: 10px 10px;
   span {
@@ -725,7 +726,7 @@ a {
   align-items: center;
   font-size: 1vw;
   color: #ffffff;
-  font-family: "Bruno Ace", cursive;
+  font-family: "Orbitron", sans-serif;
   line-height: 0;
 }
 .description-subtitle {
@@ -748,8 +749,8 @@ a {
   transform: translateY(100%);
   color: #6c6b6b;
   & > p:nth-child(1) {
-    font-family: "Bruno Ace", cursive;
-    font-weight: 400;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
     font-size: 0.8vw;
     @media only screen and (max-width: 768px) {
       line-height: 0;
@@ -865,7 +866,7 @@ a {
 .day-num {
   text-align: end;
   color: white;
-  font-family: "Bruno Ace", cursive;
+  font-family: "Orbitron", sans-serif;
   font-weight: 400;
   font-size: 1.2vw;
   line-height: 0;
@@ -874,8 +875,8 @@ a {
 #hello-world {
   text-align: center;
   color: white;
-  font-family: "Bruno Ace", cursive;
-  font-size: 0.8vw;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9vw;
   font-weight: 350;
   height: 50%;
   width: 100%;
@@ -887,7 +888,7 @@ a {
   margin: 0 auto;
 
   span {
-    font-size: 1vw;
+    font-size: 1.1vw;
     -webkit-animation-name: opacity;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
@@ -964,7 +965,8 @@ a {
     justify-content: center;
     font-weight: 300;
     align-items: center;
-    font-family: "Bruno Ace", cursive;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 500;
   }
 
   .color {
@@ -1012,8 +1014,8 @@ a {
 
 #console-log {
   color: white;
-  font-family: "Bruno Ace", cursive;
-  font-size: 0.7vw;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.8vw;
   font-weight: 350;
   display: flex;
   flex-direction: column;

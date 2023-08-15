@@ -217,16 +217,16 @@ export default () => {
               <div className="color">
                 <span>ccd5ae</span>
               </div>
-              <div className="color">
+              <div class="color">
                 <span>e9edc9</span>
               </div>
-              <div className="color">
+              <div class="color">
                 <span>fefae0</span>
               </div>
-              <div className="color">
+              <div class="color">
                 <span>ffdec0</span>
               </div>
-              <div className="color">
+              <div class="color">
                 <span>ffc694</span>
               </div>
             </div>
