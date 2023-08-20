@@ -24,8 +24,8 @@ export default () => {
             <div className="description">
               <p>BookWorld Carousel</p>
               <p className="description-subtitle">
-                Each letter represents different book themes, accompanied by
-                beloved book quotes
+                Each letter represents different book themes, accompanied by my
+                favorite book quotes
               </p>
             </div>
           </a>
@@ -116,7 +116,7 @@ export default () => {
             <div className="description">
               <p>K-VRC Viewport</p>
               <p className="description-subtitle">
-                Clicking the screen to alter the K-VRC robot's expressions
+                Clicking the screen to alter K-VRC's facial expressions
               </p>
             </div>
           </a>
@@ -231,7 +231,7 @@ export default () => {
                 <span>ffc694</span>
               </div>
             </div>
-            <div id="palette-footer">My fav palette</div>
+            <div id="palette-footer">My favorite palette</div>
           </div>
         </div>
         <div id="empty8">

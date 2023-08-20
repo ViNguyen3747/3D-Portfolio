@@ -25,8 +25,8 @@ export default () => {
           top: "2vh",
         }}
       >
-        ✨These are my 3D websites and artworks. Click on each project for the
-        experience!
+        ✨Each project is either a 3D website using React Three Fiber or an
+        animation made with Blender. Click on each for the experience!
       </div>
       <div
         className="subheaders"
