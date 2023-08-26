@@ -112,7 +112,10 @@ export default () => {
           <div id="btn">
             <button
               onClick={() => handleNextStep(false)}
-              style={{ opacity: step > 0 ? 1 : 0 }}
+              style={{
+                opacity: step > 0 ? 1 : 0,
+                pointerEvents: step > 0 ? "initial" : "none",
+              }}
             >
               <div>{"<"}</div>
               <div>{"<"}</div>
