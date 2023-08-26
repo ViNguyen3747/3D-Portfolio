@@ -628,6 +628,19 @@ canvas {
       }
     }
   }
+  #skip {
+    width: fit-content;
+    align-self: center;
+    border-style: none;
+    background: none;
+    color: white;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @keyframes slide-in {

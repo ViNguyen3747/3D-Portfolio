@@ -45,9 +45,11 @@ export default () => {
           let backgroundSwitcher = document.getElementById("background");
           carousel.style.pointerEvents = "visible";
           backgroundSwitcher.style.pointerEvents = "visible";
-          welcomeContainer.style.opacity = "0";
+          welcomeContainer.style.opacity = 0;
           welcomeContainer.style.visibility = "hidden";
           welcomeContainer.style.top = 0;
+          dimContainer.style.opacity = 0;
+          dimContainer.style.visibility = "hidden";
           break;
         default:
       }
@@ -82,7 +84,19 @@ export default () => {
       }
     }
   };
-
+  const handleSkip = () => {
+    let dimContainer = document.getElementById("dim-container");
+    let welcomeContainer = document.getElementById("welcome");
+    let carousel = document.getElementById("carousel");
+    let backgroundSwitcher = document.getElementById("background");
+    carousel.style.pointerEvents = "visible";
+    backgroundSwitcher.style.pointerEvents = "visible";
+    welcomeContainer.style.opacity = 0;
+    welcomeContainer.style.visibility = "hidden";
+    welcomeContainer.style.top = 0;
+    dimContainer.style.opacity = 0;
+    dimContainer.style.visibility = "hidden";
+  };
   return (
     <>
       {step < 5 && <div id="dim-container" />}
@@ -110,6 +124,9 @@ export default () => {
               <div>{">"}</div>
             </button>
           </div>
+          <button id="skip" onClick={() => handleSkip()}>
+            Skip
+          </button>
         </div>
       </div>
     </>
