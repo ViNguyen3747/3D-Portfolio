@@ -7,13 +7,13 @@ const CardLists = {
     "I don't play games, but I really love listening to game tracks 🎶 and watching video game cinematics.",
 
   coffee:
-    "🍩 I'm using Blender to make 3d models, and I also combine 3d models with Blender's Grease Pencil tools to make 2.5D art, which I shared via my Insta account",
-  name: "⭐ My name is Vi, pronounced as 'V'. It's actually a typo made by my Dad. My name is supposed to be 'Vy', which means 'pretty', and 'Vi' means 'tiny' in Vietnamese...",
-  code: "a JavaScript enthusiast / in love with ReactJS / a 3d modeling and Three.js learner / always eager to learn and expand knowledge💡",
+    "🍩 I use Blender to make models for my 3d websites, and sometimes use its Grease Pencil tools to make 2.5D art, which I shared via my Insta account",
+  name: "⭐ My name is Vi, pronounced as 'V', 'Vi' means 'tiny' in Vietnamese...",
+  code: "A JavaScript enthusiast / in love with ReactJS / a 3d modeling and Three.js learner / always eager to learn and expand knowledge💡",
   book: "I enjoy reading fantasy 🗡️ and sci-fi 🤖 books. My go-to places are obviously libraries and bookstores",
-  loaf: "I get my passion for baking from my mom. 🍞 I'm the only one in the family not lazy to learn baking from her haha",
+  loaf: "I can speak English, Vietnamese, and a little bit of French 🥖",
   omelette:
-    "Besides coding for my full-time job 🍳 I also code as a hobby, especially with Reactjs and Threejs",
+    "🍳 Besides coding at work, I also enjoy coding as a hobby, especially with Reactjs and R3f",
   rolling:
     "🥐 My love for baking comes from getting creative: taking one idea and putting your own twist on it ✨",
   piping:

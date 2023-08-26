@@ -25,8 +25,8 @@ export default () => {
           top: "2vh",
         }}
       >
-        ✨Each project is either a 3D website using React Three Fiber or an
-        animation made with Blender. Click on each for the experience!
+        ✨Each project is either 3D website using React Three Fiber or animation
+        made with Blender. Click on each for the experience!
       </div>
       <div
         className="subheaders"
