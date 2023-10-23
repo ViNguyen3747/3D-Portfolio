@@ -13,7 +13,7 @@ export default () => {
   useFrame(() => {
     homeRef.current.position.x = 0;
     workSpaceRef.current.position.x = w;
-    projectRef.current.position.x = w * 1.91;
+    projectRef.current.position.x = w * 1.97;
     bakingRef.current.position.x = w * 2.9;
     socialMediaRef.current.position.x = w * 4;
   });

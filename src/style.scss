@@ -690,13 +690,13 @@ canvas {
   margin: auto;
   display: grid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  grid-template-columns: repeat(8, 11vw);
+  grid-template-columns: repeat(9, 11vw);
   grid-template-rows: repeat(4, 11vw);
   grid-template-areas:
-    "project-board project-board project-board empty1 window empty2 book book"
-    "empty3 transition empty4 weather weather coffee-shop empty5 book-lover"
-    "car car office empty6 window-view sweet-city sweet-city book-flipping"
-    "workaholic empty8 sunset mars empty7 empty7 strawberry to-be-continued";
+    "project-board project-board project-board weather weather empty1 book book coffee-shop"
+    "transition empty2 frog-adventure frog-adventure empty3 window empty4 book-lover empty5"
+    "car car office empty6 window-view sweet-city sweet-city empty7 book-flipping"
+    "workaholic empty8 sunset mars empty9 empty9 empty10 strawberry to-be-continued";
   & > div {
     border: 1px solid rgb(255, 255, 255);
   }
@@ -787,6 +787,9 @@ a {
     transform: translateY(10%);
   }
 }
+#frog-adventure {
+  grid-area: frog-adventure;
+}
 #strawberry {
   grid-area: strawberry;
 }
@@ -875,7 +878,14 @@ a {
   grid-area: empty8;
   background-color: rgba(245, 238, 225, 0.3);
 }
-
+#empty9 {
+  grid-area: empty9;
+  background-color: rgba(245, 238, 225, 0.3);
+}
+#empty10 {
+  grid-area: empty10;
+  background-color: rgba(245, 238, 225, 0.3);
+}
 .day-num {
   text-align: end;
   color: white;
