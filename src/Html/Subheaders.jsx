@@ -15,7 +15,7 @@ export default () => {
           top: "11vh",
         }}
       >
-        Discover some interesting facts about myself from the hidden items 😉
+        Discover some interesting facts about me from the hidden items 😉
       </div>
       <div
         className="subheaders-project"
