@@ -3,7 +3,7 @@ import { Leaf, Flower1, Flower2, Flower3, Flower4 } from "./Icons";
 
 const MESSAGES = [
   "Before you get started, let me give you a quick go-through.",
-  "Hidden objects are scattered in this portfolio. Find these items to discover interesting facts.",
+  "Hidden objects are scattered in this portfolio. Find these items to discover interesting facts about me :)",
   "You can either scroll down or use this carousel to go to each section of the web page.",
   `I love colors! I added this background-color switcher just simply because I couldn't decide which one to use ^^`,
   "That's it! Hope you enjoy the experience!!!",
